@@ -80,11 +80,17 @@
                                                             <constraint firstAttribute="height" id="hMe-N2-klx"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="式" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Q-f6-f6d">
-                                                        <rect key="frame" x="0.0" y="20" width="71" height="20"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                                        <color key="textColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Q-f6-f6d">
+                                                        <rect key="frame" x="0.0" y="5" width="71" height="50"/>
+                                                        <color key="backgroundColor" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-Jb-Ibp">
                                                         <rect key="frame" x="78" y="5" width="277" height="50"/>
@@ -102,10 +108,10 @@
                                                     <constraint firstItem="IAs-dV-OA3" firstAttribute="leading" secondItem="Bbc-w9-M8v" secondAttribute="leading" id="5hQ-wb-Jt0"/>
                                                     <constraint firstItem="Kaq-Jb-Ibp" firstAttribute="leading" secondItem="hCI-xy-ruY" secondAttribute="trailing" id="7oN-O7-nyg"/>
                                                     <constraint firstItem="Kaq-Jb-Ibp" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" constant="5" id="8Xp-Nd-7Ki"/>
-                                                    <constraint firstItem="Z7Q-f6-f6d" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" constant="20" id="8g4-XK-AJt"/>
+                                                    <constraint firstItem="Z7Q-f6-f6d" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" constant="5" id="8g4-XK-AJt"/>
                                                     <constraint firstItem="Z7Q-f6-f6d" firstAttribute="width" secondItem="IAs-dV-OA3" secondAttribute="width" multiplier="0.2" id="930-sW-W37"/>
                                                     <constraint firstItem="Z7Q-f6-f6d" firstAttribute="leading" secondItem="Bbc-w9-M8v" secondAttribute="leading" id="AL9-4k-EAz"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Z7Q-f6-f6d" secondAttribute="bottom" constant="20" id="EWx-Ij-MCs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Z7Q-f6-f6d" secondAttribute="bottom" constant="5" id="EWx-Ij-MCs"/>
                                                     <constraint firstItem="IAs-dV-OA3" firstAttribute="top" secondItem="Bbc-w9-M8v" secondAttribute="top" id="Ktn-vF-Adt"/>
                                                     <constraint firstItem="hCI-xy-ruY" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" id="Ppv-WT-6s3"/>
                                                     <constraint firstItem="hCI-xy-ruY" firstAttribute="width" secondItem="IAs-dV-OA3" secondAttribute="width" multiplier="0.02" id="QlQ-mm-6m3"/>
@@ -125,11 +131,17 @@
                                                             <constraint firstAttribute="height" id="SLM-fW-7q1"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え" textAlignment="right" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-sh-qMb">
-                                                        <rect key="frame" x="0.0" y="10" width="71" height="39.5"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                                        <color key="textColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-sh-qMb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="59.5"/>
+                                                        <color key="backgroundColor" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsQ-4b-CXg">
                                                         <rect key="frame" x="78" y="0.0" width="277" height="60"/>
@@ -145,10 +157,10 @@
                                                 <constraints>
                                                     <constraint firstItem="dsQ-4b-CXg" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" id="5hj-fM-yhi"/>
                                                     <constraint firstItem="ggL-yT-6q2" firstAttribute="top" secondItem="M4K-Em-NYB" secondAttribute="top" id="COu-jc-TNW"/>
-                                                    <constraint firstItem="QLd-sh-qMb" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" constant="10" id="Dkw-j8-Dcg"/>
+                                                    <constraint firstItem="QLd-sh-qMb" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" id="Dkw-j8-Dcg"/>
                                                     <constraint firstItem="dsQ-4b-CXg" firstAttribute="leading" secondItem="ggL-yT-6q2" secondAttribute="trailing" id="JjZ-DQ-ay7"/>
                                                     <constraint firstAttribute="bottom" secondItem="dsQ-4b-CXg" secondAttribute="bottom" constant="10" id="KIj-f7-mz7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="QLd-sh-qMb" secondAttribute="bottom" constant="20" id="UT9-pj-M9B"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QLd-sh-qMb" secondAttribute="bottom" constant="10" id="UT9-pj-M9B"/>
                                                     <constraint firstItem="ggL-yT-6q2" firstAttribute="leading" secondItem="QLd-sh-qMb" secondAttribute="trailing" id="UXu-W1-UkG"/>
                                                     <constraint firstItem="QLd-sh-qMb" firstAttribute="leading" secondItem="M4K-Em-NYB" secondAttribute="leading" id="VoV-m2-VVi"/>
                                                     <constraint firstItem="QLd-sh-qMb" firstAttribute="width" secondItem="kbS-bs-IYD" secondAttribute="width" multiplier="0.2" id="W3h-FQ-bOZ"/>
@@ -189,9 +201,6 @@
                                                 <color key="value" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -630,7 +639,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ts-tB-jFJ" id="Ud7-uG-uKv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
