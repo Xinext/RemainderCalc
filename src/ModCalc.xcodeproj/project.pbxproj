@@ -12,6 +12,10 @@
 		4104F9881E8DFC4400518089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4104F9861E8DFC4400518089 /* Main.storyboard */; };
 		4104F98A1E8DFC4400518089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4104F9891E8DFC4400518089 /* Assets.xcassets */; };
 		4104F98D1E8DFC4400518089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4104F98B1E8DFC4400518089 /* LaunchScreen.storyboard */; };
+		4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D11E94C0A9008B24BF /* MainViewController.swift */; };
+		4167D2D51E94D5AB008B24BF /* AdModDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D31E94D5AB008B24BF /* AdModDef.swift */; };
+		4167D2D61E94D5AB008B24BF /* AdModMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D41E94D5AB008B24BF /* AdModMgr.swift */; };
+		41D2CF281E962964000468AE /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D2CF271E962964000468AE /* CommonUtility.swift */; };
 		B4D5EF321803ACE6F645BDBB /* Pods_ModCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E19AA60325F8A1E7C2ED9 /* Pods_ModCalc.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 		4104F9891E8DFC4400518089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4104F98C1E8DFC4400518089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4104F98E1E8DFC4400518089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4167D2D11E94C0A9008B24BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4167D2D31E94D5AB008B24BF /* AdModDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModDef.swift; sourceTree = "<group>"; };
+		4167D2D41E94D5AB008B24BF /* AdModMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModMgr.swift; sourceTree = "<group>"; };
+		41D2CF271E962964000468AE /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		692E19AA60325F8A1E7C2ED9 /* Pods_ModCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71268394E619387BBC32184 /* Pods-ModCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModCalc/Pods-ModCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1C766011113F6AA66E3148 /* Pods-ModCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModCalc/Pods-ModCalc.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,12 +77,16 @@
 		4104F9811E8DFC4400518089 /* ModCalc */ = {
 			isa = PBXGroup;
 			children = (
+				4167D2D31E94D5AB008B24BF /* AdModDef.swift */,
+				4167D2D41E94D5AB008B24BF /* AdModMgr.swift */,
 				4104F9821E8DFC4400518089 /* AppDelegate.swift */,
 				4104F9841E8DFC4400518089 /* ViewController.swift */,
+				4167D2D11E94C0A9008B24BF /* MainViewController.swift */,
 				4104F9861E8DFC4400518089 /* Main.storyboard */,
 				4104F9891E8DFC4400518089 /* Assets.xcassets */,
 				4104F98B1E8DFC4400518089 /* LaunchScreen.storyboard */,
 				4104F98E1E8DFC4400518089 /* Info.plist */,
+				41D2CF271E962964000468AE /* CommonUtility.swift */,
 			);
 			path = ModCalc;
 			sourceTree = "<group>";
@@ -212,6 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4167D2D61E94D5AB008B24BF /* AdModMgr.swift in Sources */,
+				4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */,
+				4167D2D51E94D5AB008B24BF /* AdModDef.swift in Sources */,
+				41D2CF281E962964000468AE /* CommonUtility.swift in Sources */,
 				4104F9851E8DFC4400518089 /* ViewController.swift in Sources */,
 				4104F9831E8DFC4400518089 /* AppDelegate.swift in Sources */,
 			);
