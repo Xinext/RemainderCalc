@@ -9,8 +9,8 @@ import UIKit
  - Image Utilty
  - Author: xinext HF
  - Copyright: xinext
- - Date: 2017/02/11
- - Version: 1.0.0
+ - Date: 2017/04/13
+ - Version: 1.0.1
  */
 class XIImage {
     
@@ -82,7 +82,7 @@ class XIDialog {
      - parameter pvc: ViewController Parent ViewController.
      - parameter msg: Display message.
      */
-    static func DispAlertMsg( pcv:UIViewController, msg: String ){
+    static func DispAlertMsg( pvc:UIViewController, msg: String ){
         
         let titleText = NSLocalizedString("MSG_ALERT", comment: "ALERT")
         let alertController: UIAlertController = UIAlertController(title: titleText, message: msg, preferredStyle: .alert)
@@ -90,7 +90,7 @@ class XIDialog {
             (action) -> Void in
         }
         alertController.addAction(actionOK)
-        pcv.present(alertController, animated: true, completion: nil)
+        pvc.present(alertController, animated: true, completion: nil)
     }
     
     /**
@@ -98,7 +98,7 @@ class XIDialog {
      - parameter pvc: ViewController Parent ViewController.
      - parameter msg: Display message.
      */
-    static func DispSelectSettingPage( pcv:UIViewController, msg: String, cancelHandler: (() -> Swift.Void)? = nil ){
+    static func DispSelectSettingPage( pvc:UIViewController, msg: String, cancelHandler: (() -> Swift.Void)? = nil ){
         
         let titleText = NSLocalizedString("MSG_ALERT", comment: "ALERT")
         let alertController: UIAlertController = UIAlertController(title: titleText, message: msg, preferredStyle: .alert)
@@ -117,16 +117,16 @@ class XIDialog {
                                                             (action:UIAlertAction!) -> Void in
                                                             let url = NSURL(string:UIApplicationOpenSettingsURLString)
                                                             if #available(iOS 10.0, *) {
-                                                                UIApplication.shared.open(url as! URL,options: [:], completionHandler: nil )
+                                                                UIApplication.shared.open(url! as URL,options: [:], completionHandler: nil )
                                                             } else {
-                                                                UIApplication.shared.openURL(url as! URL)
+                                                                UIApplication.shared.openURL(url! as URL)
                                                             }
         })
         
         alertController.addAction(cancelAction)
         alertController.addAction(defaultAction)
         
-        pcv.present(alertController, animated: true, completion: nil)
+        pvc.present(alertController, animated: true, completion: nil)
     }
  }
 
@@ -168,7 +168,7 @@ extension UIImage{
 }
 
 /**
- - 最前面のUIViewControllerを取得する
+ - 最前面のUIViewController取得機能を拡張
  */
 extension UIApplication {
     
@@ -189,7 +189,7 @@ extension UIApplication {
 }
 
 /**
- - UIViewの枠設定拡張
+ - UIViewの枠設定機能を拡張
  */
 extension UIView {
     
@@ -225,14 +225,5 @@ extension UIView {
     }
 }
 
-extension UIButton {
-    
-    @IBInspectable var TitleLabelAdjustsFontSizeToFitWidth: Bool {
-        get {
-            return (self.titleLabel?.adjustsFontSizeToFitWidth)!
-        }
-        set {
-            self.titleLabel?.adjustsFontSizeToFitWidth = newValue
-        }
-    }
-}
+
+
