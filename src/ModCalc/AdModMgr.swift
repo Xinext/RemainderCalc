@@ -8,17 +8,17 @@ import GoogleMobileAds
 /**
  - [ENG]The UIViewController for AdMod.
  - [JPN]AdMod管理用 UIViewController
- - Author: Hiroaki Fujisawa
+ - Author: xinext HF
  - Copyright: xinext
- - Date: 2016/10/19
- - Version: 1.0.0
+ - Date: 2017/04/13
+ - Version: 1.0.1
  */
 class AdModMgr: UIViewController, GADBannerViewDelegate {
-
-    // *** internal ***
+    
+    // MARK: - Internal variable
     let adBannerView = GADBannerView(adSize:kGADAdSizeSmartBannerPortrait)
     
-    // *** private ***
+    // MARK: - Privet variable
     private var _contentsView: UIView!
     private var _layoutConstraint: NSLayoutConstraint? = nil
     
@@ -27,6 +27,7 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         case BOTTOM
     }
     
+    // MARK: - Public method
     /**
      Initialization of processing
      - parameter pvc: ViewController Parent ViewController.
@@ -34,7 +35,7 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
      - parameter cv: UIView The layout constraint of contents view.
      - returns: nothing
      */
-    func initManager(pvc: UIViewController, cv: UIView, lc: NSLayoutConstraint) {
+    func InitManager(pvc: UIViewController, cv: UIView, lc: NSLayoutConstraint) {
         
         pvc.addChildViewController(self)
         
@@ -47,17 +48,22 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         adBannerView.rootViewController = self
         
         let gadRequest:GADRequest = GADRequest()
+
+#if TESTMODE = true
+    setDebugMode(pvc: pvc, gadRequest: gadRequest)
+#endif
+        
         adBannerView.load(gadRequest)
         
         self.parent?.view.addSubview(adBannerView)
     }
-
+    
     /**
      Display AdView.
      - parameter pos: DISP_POSITION
      - returns: nothing
      */
-    func dispAdView(pos: DISP_POSITION) {
+    func DispAdView(pos: DISP_POSITION) {
         
         var rectBanner: CGRect
         
@@ -69,23 +75,28 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         case DISP_POSITION.TOP:
             banner_y = _contentsView!.frame.origin.y
         default:    // bottom
-            banner_y = self.view.frame.size.height - (adBannerView.frame.size.height - 1)
+            banner_y = self.view.frame.size.height - adBannerView.frame.size.height
         }
         rectBanner = CGRect(x: banner_x, y: banner_y, width: banner_width, height: banner_height)
         
         adBannerView.frame = rectBanner
         
-        _layoutConstraint?.constant += adBannerView.frame.size.height
- 
+        if ( adBannerView.isHidden == true ) {
+            _layoutConstraint?.constant += adBannerView.frame.size.height
+        }
+        else {
+            // do nothign.
+        }
+        
         adBannerView.isHidden = false
     }
-
+    
     /**
      Hide AdView.
      - parameter pos: DISP_POSITION
      - returns: nothing
      */
-    func hideAdView() {
+    func HideAdView() {
         
         if ( adBannerView.isHidden == false ) {
             _layoutConstraint?.constant -= adBannerView.frame.size.height
@@ -95,5 +106,19 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         }
         
         adBannerView.isHidden = true
+    }
+    
+    // MARK: - private method
+    private func setDebugMode( pvc: ViewController, gadRequest: GADRequest) {
+        
+        gadRequest.testDevices = [ADMOD_UNITID]
+        
+        let alertController: UIAlertController = UIAlertController(title: "＊＊＊注意＊＊＊", message: "ADMOD is debug mode.", preferredStyle: .alert)
+        let actionOK = UIAlertAction(title: "OK", style: .default){
+            (action) -> Void in
+        }
+        alertController.addAction(actionOK)
+        pvc.present(alertController, animated: true, completion: nil)
+
     }
 }
