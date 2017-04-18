@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ModCalc
+*/
+
+"MSG_ALERT" = "Alert";
+"MSG_INFO" = "Information";
+
+"MSG_OK" = "OK";
+"MSG_CANCEL" = "Cancel";
+"MSG_YES" = "Yes";
+"MSG_NO" = "No";

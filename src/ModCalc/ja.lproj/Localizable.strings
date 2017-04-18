@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ModCalc
+*/
+
+"MSG_ALERT" = "注意";
+"MSG_INFO" = "情報";
+
+"MSG_OK" = "OK";
+"MSG_CANCEL" = "キャンセル";
+"MSG_YES" = "はい";
+"MSG_NO" = "いいえ";
