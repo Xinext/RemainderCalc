@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9HO-ib-iiI">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9HO-ib-iiI">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,44 +19,50 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="TopView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKL-8u-Ank" userLabel="MainContentsView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKL-8u-Ank" userLabel="MainContentsAreaView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25m-98-Xsj" userLabel="VerticalCriterionView">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="504"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" id="QMS-8r-lay"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-JD-DB4" userLabel="CalcAreaView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="166.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VC5-OX-Kc6" userLabel="CalcAreaVerticalCriterionView">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="199"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" id="u8Q-l7-ccq"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-iS-gAc" userLabel="CalcValuesView">
-                                                <rect key="frame" x="10" y="0.0" width="355" height="69.5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-iS-gAc" userLabel="CalcValueAreaView">
+                                                <rect key="frame" x="10" y="0.0" width="300" height="58"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gm4-oY-upy" userLabel="CalcValuesHorizontalCriterionView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="SPY-75-6L3"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg7-Ni-fTC">
-                                                        <rect key="frame" x="0.0" y="10" width="355" height="59.5"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789012" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sg7-Ni-fTC" userLabel="InputValuesTextField">
+                                                        <rect key="frame" x="0.0" y="10" width="300" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -70,38 +76,43 @@
                                                     <constraint firstAttribute="trailing" secondItem="gm4-oY-upy" secondAttribute="trailing" id="kEn-qs-6zR"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-w9-M8v" userLabel="SolutionValueView">
-                                                <rect key="frame" x="10" y="69.5" width="355" height="60"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-w9-M8v" userLabel="ExpressionValueAreaView">
+                                                <rect key="frame" x="10" y="58" width="300" height="50"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAs-dV-OA3" userLabel="SolutionValueHorizontalCriterionView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="0.0"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAs-dV-OA3" userLabel="ExpressionValueHorizontalCriterionView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="hMe-N2-klx"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Q-f6-f6d">
-                                                        <rect key="frame" x="0.0" y="5" width="71" height="50"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Q-f6-f6d" userLabel="ExpressionLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5" width="60" height="40"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="10"/>
+                                                                <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-Jb-Ibp">
-                                                        <rect key="frame" x="78" y="5" width="277" height="50"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-xy-ruY" userLabel="ExpressionSpacer">
+                                                        <rect key="frame" x="60" y="-0.5" width="6" height="50"/>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789012÷123456789012" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-Jb-Ibp" userLabel="ExpressionValueTextField">
+                                                        <rect key="frame" x="66" y="5" width="234" height="40"/>
                                                         <color key="backgroundColor" red="0.6470588235294118" green="0.81960784313725488" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-xy-ruY">
-                                                        <rect key="frame" x="71" y="0.0" width="7" height="60"/>
-                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="hCI-xy-ruY" secondAttribute="bottom" id="1wn-gp-XEJ"/>
@@ -121,38 +132,43 @@
                                                     <constraint firstAttribute="bottom" secondItem="Kaq-Jb-Ibp" secondAttribute="bottom" constant="5" id="xbM-jV-RdH"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4K-Em-NYB" userLabel="RemainderValueView">
-                                                <rect key="frame" x="10" y="129.5" width="355" height="69.5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4K-Em-NYB" userLabel="AnswerValueAreaView">
+                                                <rect key="frame" x="10" y="108" width="300" height="57.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbS-bs-IYD" userLabel="RemainderHorizontalCriterionView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="0.0"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbS-bs-IYD" userLabel="AnswerValueHorizontalCriterionView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="SLM-fW-7q1"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-sh-qMb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="59.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-sh-qMb" userLabel="AnswerLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="47.5"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="10"/>
+                                                                <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsQ-4b-CXg">
-                                                        <rect key="frame" x="78" y="0.0" width="277" height="60"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggL-yT-6q2" userLabel="AnswerSpacer">
+                                                        <rect key="frame" x="60" y="-0.5" width="6" height="57.5"/>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890...12345" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="dsQ-4b-CXg" userLabel="AnswerValueTextField">
+                                                        <rect key="frame" x="66" y="0.0" width="234" height="47.5"/>
                                                         <color key="backgroundColor" red="0.91764705882352937" green="0.7803921568627451" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="72"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggL-yT-6q2">
-                                                        <rect key="frame" x="71" y="0.0" width="7" height="69.5"/>
-                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="dsQ-4b-CXg" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" id="5hj-fM-yhi"/>
@@ -206,31 +222,31 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-7V-a0B" userLabel="DecimalPointAreaView">
-                                        <rect key="frame" x="0.0" y="199" width="375" height="67"/>
+                                        <rect key="frame" x="0.0" y="166.5" width="320" height="56"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaA-T1-jJX" userLabel="DecimalPointView">
-                                                <rect key="frame" x="16" y="0.0" width="343" height="67"/>
+                                                <rect key="frame" x="16" y="0.0" width="288" height="56"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX8-B8-hW7" userLabel="DecimalPointHorizontalCriterionView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="W7W-Zk-jUl"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小数点の位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-FR-hhU">
-                                                        <rect key="frame" x="0.0" y="5" width="164.5" height="57"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小数点の位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-FR-hhU" userLabel="DecimalPointTitleLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5" width="138" height="46"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-6M-NfV">
-                                                        <rect key="frame" x="164.5" y="0.0" width="7" height="67"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-6M-NfV" userLabel="DecimalPointSpacer">
+                                                        <rect key="frame" x="138" y="0.0" width="6" height="56"/>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w91-4N-ZQo">
-                                                        <rect key="frame" x="171.5" y="5" width="51.5" height="57"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w91-4N-ZQo" userLabel="DecimalPointDownButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="144" y="5" width="43.5" height="46"/>
                                                         <color key="backgroundColor" red="0.396078431372549" green="0.67450980392156867" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <state key="normal" title="&lt;">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -240,16 +256,16 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-oN-8P1">
-                                                        <rect key="frame" x="223" y="5" width="68.5" height="57"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-oN-8P1" userLabel="DecimalPointValueLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="187.5" y="5" width="57" height="46"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noE-1t-jeh">
-                                                        <rect key="frame" x="291.5" y="5" width="51.5" height="57"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noE-1t-jeh" userLabel="DecimalPointUpButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="244.5" y="5" width="43.5" height="46"/>
                                                         <color key="backgroundColor" red="0.39607843139999999" green="0.67450980390000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <state key="normal" title="&gt;">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -295,32 +311,43 @@
                                             <constraint firstItem="TaA-T1-jJX" firstAttribute="top" secondItem="RfJ-7V-a0B" secondAttribute="top" id="aKJ-3z-fIs"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lm-lE-oQT" userLabel="InputKeysView">
-                                        <rect key="frame" x="0.0" y="266" width="375" height="266"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lm-lE-oQT" userLabel="InputKeysAreaView">
+                                        <rect key="frame" x="0.0" y="222.5" width="320" height="222"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BWU-KH-3le">
-                                                <rect key="frame" x="16" y="5" width="343" height="256"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BWU-KH-3le" userLabel="InputKeysAreaStackView">
+                                                <rect key="frame" x="16" y="5" width="288" height="212"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-qB-SGi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="56.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-qB-SGi" userLabel="InputKeysAreaStackView1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-Bd-xdh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-Bd-xdh" userLabel="Key7Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490196078434" green="0.65490196078431373" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="7"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="5"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-ro-jJk">
-                                                                <rect key="frame" x="88.5" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-ro-jJk" userLabel="Key8Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490196078434" green="0.65490196078431373" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="8"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -330,10 +357,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86F-Ib-wtD">
-                                                                <rect key="frame" x="176.5" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86F-Ib-wtD" userLabel="Key9Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490196078434" green="0.65490196078431373" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="9"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -343,10 +370,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssK-fH-Q3i">
-                                                                <rect key="frame" x="265" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssK-fH-Q3i" userLabel="KeyACButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.78823529410000004" green="0.2274509804" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="AC"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -358,13 +385,13 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bn9-cK-eLN">
-                                                        <rect key="frame" x="0.0" y="66.5" width="343" height="56.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bn9-cK-eLN" userLabel="InputKeysAreaStackView2">
+                                                        <rect key="frame" x="0.0" y="55.5" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-F1-hjg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-F1-hjg" userLabel="Key4Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="4"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -374,10 +401,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-fI-YTf">
-                                                                <rect key="frame" x="88.5" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-fI-YTf" userLabel="Key5Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="5"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -387,10 +414,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-ir-jj1">
-                                                                <rect key="frame" x="176.5" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-ir-jj1" userLabel="Key6Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="6"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -400,10 +427,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-G9-Yx5">
-                                                                <rect key="frame" x="265" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-G9-Yx5" userLabel="KeyBSButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.45490196078431372" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="←"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -415,13 +442,13 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-Cc-GKc">
-                                                        <rect key="frame" x="0.0" y="133" width="343" height="56.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-Cc-GKc" userLabel="InputKeysAreaStackView3">
+                                                        <rect key="frame" x="0.0" y="111" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-bx-sVB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-bx-sVB" userLabel="Key1Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="1"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -431,10 +458,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-LT-Gh8">
-                                                                <rect key="frame" x="88.5" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-LT-Gh8" userLabel="Key2Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="2"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -444,10 +471,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-3D-p1v">
-                                                                <rect key="frame" x="176.5" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-3D-p1v" userLabel="Key3Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="3"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -457,8 +484,8 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-PM-iC9">
-                                                                <rect key="frame" x="265" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-PM-iC9" userLabel="KeyDummy1Button">
+                                                                <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -470,13 +497,13 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-pf-Ibm">
-                                                        <rect key="frame" x="0.0" y="199.5" width="343" height="56.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-pf-Ibm" userLabel="InputKeysAreaStackView4">
+                                                        <rect key="frame" x="0.0" y="166.5" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-gc-gnk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-gc-gnk" userLabel="Key0Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="0"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -486,10 +513,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-XA-Dx9">
-                                                                <rect key="frame" x="88.5" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-XA-Dx9" userLabel="Key00Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="00"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -499,10 +526,10 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMX-3x-TPM">
-                                                                <rect key="frame" x="176.5" y="0.0" width="78.5" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMX-3x-TPM" userLabel="KeyDotButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                                <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="."/>
                                                                 <userDefinedRuntimeAttributes>
@@ -512,8 +539,8 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akM-D3-4tU">
-                                                                <rect key="frame" x="265" y="0.0" width="78" height="56.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akM-D3-4tU" userLabel="KeyDummy2Button">
+                                                                <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -535,16 +562,16 @@
                                             <constraint firstAttribute="trailing" secondItem="BWU-KH-3le" secondAttribute="trailing" constant="16" id="uaG-nD-qdW"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-fm-95T" userLabel="CalcKeysView">
-                                        <rect key="frame" x="0.0" y="532" width="375" height="73"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-fm-95T" userLabel="CalcKeysAreaView">
+                                        <rect key="frame" x="0.0" y="444.5" width="320" height="60.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-oV-HPN">
-                                                <rect key="frame" x="16" y="5" width="343" height="58"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-oV-HPN" userLabel="CalcKeysAreaStackView">
+                                                <rect key="frame" x="16" y="5" width="288" height="45.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfs-pn-ibq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="58"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfs-pn-ibq" userLabel="KeyDivideButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="45.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.45490196078431372" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="÷"/>
                                                         <userDefinedRuntimeAttributes>
@@ -552,19 +579,21 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="MinimumScaleFactor">
+                                                                <real key="value" value="0.10000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-fM-zz5">
-                                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="58"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-fM-zz5" userLabel="KeyEqualButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                        <rect key="frame" x="149" y="0.0" width="139" height="45.5"/>
                                                         <color key="backgroundColor" red="0.78823529411764703" green="0.22745098039215686" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="="/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                 </subviews>
@@ -611,15 +640,42 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="あまり割算電卓" id="2PT-tp-QYd">
-                        <barButtonItem key="rightBarButtonItem" title="履歴" id="NAj-Eg-CwO">
+                        <barButtonItem key="leftBarButtonItem" title="履歴" id="NAj-Eg-CwO" userLabel="HistoryButton">
                             <connections>
                                 <segue destination="0fq-KF-idi" kind="show" id="W9J-dY-KsD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="outletAnswerLabel" destination="QLd-sh-qMb" id="Qaj-8L-TI2"/>
+                        <outlet property="outletAnswerValueTextField" destination="dsQ-4b-CXg" id="ELD-d9-DsA"/>
+                        <outlet property="outletDecimalPointDownButton" destination="w91-4N-ZQo" id="71a-GP-Wol"/>
+                        <outlet property="outletDecimalPointTitleLabel" destination="C7b-FR-hhU" id="Bsb-pM-zAm"/>
+                        <outlet property="outletDecimalPointUpButton" destination="noE-1t-jeh" id="WuU-ha-Pnj"/>
+                        <outlet property="outletDecimalPointValueLabel" destination="hWf-oN-8P1" id="BEi-Ge-R5f"/>
+                        <outlet property="outletExpressionLabel" destination="Z7Q-f6-f6d" id="i1L-Z8-DzZ"/>
+                        <outlet property="outletExpressionValueTextField" destination="Kaq-Jb-Ibp" id="PGr-se-KHw"/>
+                        <outlet property="outletHistoryButton" destination="NAj-Eg-CwO" id="Fk1-uX-1zm"/>
+                        <outlet property="outletInputValuesTextField" destination="Sg7-Ni-fTC" id="4wA-mt-pB0"/>
+                        <outlet property="outletKey00Button" destination="tqT-XA-Dx9" id="y0P-qU-4t0"/>
+                        <outlet property="outletKey0Button" destination="hJk-gc-gnk" id="fRM-JI-pAB"/>
+                        <outlet property="outletKey1Button" destination="bqr-bx-sVB" id="hn2-De-VKc"/>
+                        <outlet property="outletKey2Button" destination="8BV-LT-Gh8" id="bDP-kZ-lhg"/>
+                        <outlet property="outletKey3Button" destination="JSA-3D-p1v" id="rcY-rt-qkV"/>
+                        <outlet property="outletKey4Button" destination="JKW-F1-hjg" id="pR2-Pl-0Uw"/>
+                        <outlet property="outletKey5Button" destination="zeD-fI-YTf" id="ilG-Jb-l4v"/>
+                        <outlet property="outletKey6Button" destination="Nn7-ir-jj1" id="FBF-SC-Xp6"/>
+                        <outlet property="outletKey7Button" destination="G1h-Bd-xdh" id="7sa-an-FWT"/>
+                        <outlet property="outletKey8Button" destination="oTV-ro-jJk" id="pqm-Lp-Iiq"/>
+                        <outlet property="outletKey9Button" destination="86F-Ib-wtD" id="SSn-hk-35j"/>
+                        <outlet property="outletKeyACButton" destination="ssK-fH-Q3i" id="Ou8-yc-eBF"/>
+                        <outlet property="outletKeyBSButton" destination="wEC-G9-Yx5" id="c4t-QV-K9o"/>
+                        <outlet property="outletKeyDivideButton" destination="wfs-pn-ibq" id="kg8-an-v4k"/>
+                        <outlet property="outletKeyDotButton" destination="AMX-3x-TPM" id="fKA-I2-mk7"/>
+                        <outlet property="outletKeyEqualButton" destination="B7Z-fM-zz5" id="Ybx-gG-adI"/>
                         <outlet property="outletMainContentsBottomLayoutConstraint" destination="eeg-L0-KJB" id="W0z-oy-mj4"/>
                         <outlet property="outletMainContentsView" destination="nKL-8u-Ank" id="luf-d3-1TQ"/>
+                        <outlet property="outletNavigationItem" destination="2PT-tp-QYd" id="L0S-Dw-IRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -631,15 +687,15 @@
             <objects>
                 <tableViewController id="0fq-KF-idi" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a7Z-OY-6v8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2ts-tB-jFJ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ts-tB-jFJ" id="Ud7-uG-uKv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
