@@ -6,12 +6,14 @@ import UIKit
 import GoogleMobileAds
 
 /**
- - [ENG]The UIViewController for AdMod.
- - [JPN]AdMod管理用 UIViewController
+ AdMod管理用 UIViewController
  - Author: xinext HF
  - Copyright: xinext
- - Date: 2017/04/13
- - Version: 1.0.1
+ - Date: 2017/04/18
+ - Version: 1.0.2
+ - Remark: ADMOD_UNITID 及び、ADMOD_TESTID を別途定義する必要があります。
+           それぞれのIDはGoogle AdModの仕様に従って取得してください。
+           また、リリース時は、ADMOD_TESTIDをセットしない様にTestModeをfalseへ設定してください。
  */
 class AdModMgr: UIViewController, GADBannerViewDelegate {
     
@@ -48,13 +50,13 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         adBannerView.rootViewController = self
         
         let gadRequest:GADRequest = GADRequest()
-
-#if TESTMODE = true
-    setDebugMode(pvc: pvc, gadRequest: gadRequest)
+        
+#if true // Test mode
+    gadRequest.testDevices = [ADMOD_TESTID]
+    notifyDebugMode(pvc: pvc)
 #endif
         
         adBannerView.load(gadRequest)
-        
         self.parent?.view.addSubview(adBannerView)
     }
     
@@ -109,11 +111,9 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
     }
     
     // MARK: - private method
-    private func setDebugMode( pvc: ViewController, gadRequest: GADRequest) {
+    private func notifyDebugMode( pvc: UIViewController ) {
         
-        gadRequest.testDevices = [ADMOD_UNITID]
-        
-        let alertController: UIAlertController = UIAlertController(title: "＊＊＊注意＊＊＊", message: "ADMOD is debug mode.", preferredStyle: .alert)
+        let alertController: UIAlertController = UIAlertController(title: "＊＊＊注意＊＊＊", message: "AdMod is debug mode.", preferredStyle: .alert)
         let actionOK = UIAlertAction(title: "OK", style: .default){
             (action) -> Void in
         }
