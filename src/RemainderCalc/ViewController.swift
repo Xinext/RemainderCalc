@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ModCalc
+//  RemainderCalc
 //
 //  Created by Hiroaki Fujisawa on 2017/03/31.
 //  Copyright © 2017年 xinext. All rights reserved.

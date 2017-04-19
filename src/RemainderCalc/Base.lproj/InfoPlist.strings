@@ -1,7 +1,7 @@
 /* 
   InfoPlist.strings
-  ModCalc
-  for English
+  RemainderCalc
+  for Base
 */
 
 CFBundleDisplayName = "RemainderCalc";

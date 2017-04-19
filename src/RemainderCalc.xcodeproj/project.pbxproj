@@ -20,11 +20,11 @@
 		417471AE1EA71CAD00A0BDF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */; };
 		41A51B7F1E9DF2F6009A3A41 /* XIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */; };
 		41D2CF281E962964000468AE /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D2CF271E962964000468AE /* CommonUtility.swift */; };
-		B4D5EF321803ACE6F645BDBB /* Pods_ModCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E19AA60325F8A1E7C2ED9 /* Pods_ModCalc.framework */; };
+		B4D5EF321803ACE6F645BDBB /* Pods_RemainderCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4104F97F1E8DFC4400518089 /* ModCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4104F97F1E8DFC4400518089 /* RemainderCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemainderCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4104F9821E8DFC4400518089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4104F9841E8DFC4400518089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4104F9871E8DFC4400518089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,9 +42,9 @@
 		417471B41EA71EE900A0BDF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingLabel.swift; sourceTree = "<group>"; };
 		41D2CF271E962964000468AE /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
-		692E19AA60325F8A1E7C2ED9 /* Pods_ModCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C71268394E619387BBC32184 /* Pods-ModCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModCalc/Pods-ModCalc.debug.xcconfig"; sourceTree = "<group>"; };
-		DB1C766011113F6AA66E3148 /* Pods-ModCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModCalc/Pods-ModCalc.release.xcconfig"; sourceTree = "<group>"; };
+		692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemainderCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71268394E619387BBC32184 /* Pods-RemainderCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemainderCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		DB1C766011113F6AA66E3148 /* Pods-RemainderCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemainderCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4D5EF321803ACE6F645BDBB /* Pods_ModCalc.framework in Frameworks */,
+				B4D5EF321803ACE6F645BDBB /* Pods_RemainderCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 		11549DE6557D17CA8A56C89E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				692E19AA60325F8A1E7C2ED9 /* Pods_ModCalc.framework */,
+				692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 		4104F9761E8DFC4300518089 = {
 			isa = PBXGroup;
 			children = (
-				4104F9811E8DFC4400518089 /* ModCalc */,
+				4104F9811E8DFC4400518089 /* RemainderCalc */,
 				4104F9801E8DFC4400518089 /* Products */,
 				6108D5CFE50C4662A413F528 /* Pods */,
 				11549DE6557D17CA8A56C89E /* Frameworks */,
@@ -80,12 +80,12 @@
 		4104F9801E8DFC4400518089 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4104F97F1E8DFC4400518089 /* ModCalc.app */,
+				4104F97F1E8DFC4400518089 /* RemainderCalc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4104F9811E8DFC4400518089 /* ModCalc */ = {
+		4104F9811E8DFC4400518089 /* RemainderCalc */ = {
 			isa = PBXGroup;
 			children = (
 				4167D2D31E94D5AB008B24BF /* AdModDef.swift */,
@@ -103,14 +103,14 @@
 				413CA2161EA5F34F00D98587 /* Localizable.strings */,
 				417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */,
 			);
-			path = ModCalc;
+			path = RemainderCalc;
 			sourceTree = "<group>";
 		};
 		6108D5CFE50C4662A413F528 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C71268394E619387BBC32184 /* Pods-ModCalc.debug.xcconfig */,
-				DB1C766011113F6AA66E3148 /* Pods-ModCalc.release.xcconfig */,
+				C71268394E619387BBC32184 /* Pods-RemainderCalc.debug.xcconfig */,
+				DB1C766011113F6AA66E3148 /* Pods-RemainderCalc.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4104F97E1E8DFC4300518089 /* ModCalc */ = {
+		4104F97E1E8DFC4300518089 /* RemainderCalc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4104F9911E8DFC4400518089 /* Build configuration list for PBXNativeTarget "ModCalc" */;
+			buildConfigurationList = 4104F9911E8DFC4400518089 /* Build configuration list for PBXNativeTarget "RemainderCalc" */;
 			buildPhases = (
 				2E6D6E169EED084CC11825C7 /* [CP] Check Pods Manifest.lock */,
 				4104F97B1E8DFC4300518089 /* Sources */,
@@ -133,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = ModCalc;
-			productName = ModCalc;
-			productReference = 4104F97F1E8DFC4400518089 /* ModCalc.app */;
+			name = RemainderCalc;
+			productName = RemainderCalc;
+			productReference = 4104F97F1E8DFC4400518089 /* RemainderCalc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4104F97A1E8DFC4300518089 /* Build configuration list for PBXProject "ModCalc" */;
+			buildConfigurationList = 4104F97A1E8DFC4300518089 /* Build configuration list for PBXProject "RemainderCalc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4104F97E1E8DFC4300518089 /* ModCalc */,
+				4104F97E1E8DFC4300518089 /* RemainderCalc */,
 			);
 		};
 /* End PBXProject section */
@@ -217,7 +217,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModCalc/Pods-ModCalc-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B64C5A519C42E8324634A8B1 /* [CP] Embed Pods Frameworks */ = {
@@ -232,7 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModCalc/Pods-ModCalc-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -391,14 +391,14 @@
 		};
 		4104F9921E8DFC4400518089 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C71268394E619387BBC32184 /* Pods-ModCalc.debug.xcconfig */;
+			baseConfigurationReference = C71268394E619387BBC32184 /* Pods-RemainderCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6N89BHW7Q5;
-				INFOPLIST_FILE = ModCalc/Info.plist;
+				INFOPLIST_FILE = RemainderCalc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xinext.ModCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = xinext.RemainderCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -406,14 +406,14 @@
 		};
 		4104F9931E8DFC4400518089 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB1C766011113F6AA66E3148 /* Pods-ModCalc.release.xcconfig */;
+			baseConfigurationReference = DB1C766011113F6AA66E3148 /* Pods-RemainderCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6N89BHW7Q5;
-				INFOPLIST_FILE = ModCalc/Info.plist;
+				INFOPLIST_FILE = RemainderCalc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xinext.ModCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = xinext.RemainderCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -422,7 +422,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4104F97A1E8DFC4300518089 /* Build configuration list for PBXProject "ModCalc" */ = {
+		4104F97A1E8DFC4300518089 /* Build configuration list for PBXProject "RemainderCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4104F98F1E8DFC4400518089 /* Debug */,
@@ -431,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4104F9911E8DFC4400518089 /* Build configuration list for PBXNativeTarget "ModCalc" */ = {
+		4104F9911E8DFC4400518089 /* Build configuration list for PBXNativeTarget "RemainderCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4104F9921E8DFC4400518089 /* Debug */,

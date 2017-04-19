@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  ModCalc
+//  RemainderCalc
 //
 
 
