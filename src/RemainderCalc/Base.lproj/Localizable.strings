@@ -3,10 +3,24 @@
   RemainderCalc
 */
 
-"MSG_ALERT" = "Alert";
-"MSG_INFO" = "Information";
+// MARK: - Common strings
+"STR_ALERT" = "Alert";
+"STR_INFO" = "Information";
 
-"MSG_OK" = "OK";
-"MSG_CANCEL" = "Cancel";
-"MSG_YES" = "Yes";
-"MSG_NO" = "No";
+"STR_OK" = "OK";
+"STR_CANCEL" = "Cancel";
+"STR_YES" = "Yes";
+"STR_NO" = "No";
+
+// MARK: - Application
+"STR_APP_TITLE" = "RemainderCalc";
+
+// MARK: - Main View
+"STR_MAIN_VIEW_TITLE" = "Remainder calculator";
+"STR_MAIN_HISTORY_BUTTON" = "Hist.";
+"STR_MAIN_EXP_LABEL" = "Exp.";
+"STR_MAIN_ANS_LABEL" = "Ans.";
+"STR_MAIN_DECPOS_LABEL" = "Decimals number";
+
+// MARK: - Main View
+"STR_HISTORY_VIEW_TITLE" = "Computation history";

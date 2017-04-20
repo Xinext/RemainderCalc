@@ -62,6 +62,8 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         self.initEachView()
+        self.localizeEachItem()
+        
         adMgr.DispAdView(pos: AdModMgr.DISP_POSITION.BOTTOM)
     }
     
@@ -106,6 +108,19 @@ class MainViewController: UIViewController {
         outletInputValuesTextField.isUserInteractionEnabled = false
         outletExpressionValueTextField.isUserInteractionEnabled = false
         outletAnswerValueTextField.isUserInteractionEnabled = false
+        
+    }
+    
+    /**
+     localize each item
+     */
+    private func localizeEachItem() {
+     
+       outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
+       outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
+       outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
+       outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
+       outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
         
     }
     

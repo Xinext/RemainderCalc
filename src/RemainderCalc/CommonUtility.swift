@@ -84,7 +84,7 @@ class XIDialog {
      */
     static func DispAlertMsg( pvc:UIViewController, msg: String ){
         
-        let titleText = NSLocalizedString("MSG_ALERT", comment: "ALERT")
+        let titleText = NSLocalizedString("STR_ALERT", comment: "ALERT")
         let alertController: UIAlertController = UIAlertController(title: titleText, message: msg, preferredStyle: .alert)
         let actionOK = UIAlertAction(title: "OK", style: .default){
             (action) -> Void in
@@ -100,18 +100,18 @@ class XIDialog {
      */
     static func DispSelectSettingPage( pvc:UIViewController, msg: String, cancelHandler: (() -> Swift.Void)? = nil ){
         
-        let titleText = NSLocalizedString("MSG_ALERT", comment: "ALERT")
+        let titleText = NSLocalizedString("STR_ALERT", comment: "ALERT")
         let alertController: UIAlertController = UIAlertController(title: titleText, message: msg, preferredStyle: .alert)
         
         // Create action and added.
         // Cancel
-        let cancelAction:UIAlertAction = UIAlertAction(title: NSLocalizedString("MSG_CANCEL", comment: "Cancel"),
+        let cancelAction:UIAlertAction = UIAlertAction(title: NSLocalizedString("STR_CANCEL", comment: "Cancel"),
                                                        style: UIAlertActionStyle.cancel,
                                                        handler:{(action:UIAlertAction!) in cancelHandler!()
                                                         })
         
         // To Setting page
-        let defaultAction:UIAlertAction = UIAlertAction(title: NSLocalizedString("MSG_TO_SETTING_PAGE", comment: "To settings"),
+        let defaultAction:UIAlertAction = UIAlertAction(title: NSLocalizedString("STR_TO_SETTING_PAGE", comment: "To settings"),
                                                         style: UIAlertActionStyle.default,
                                                         handler:{
                                                             (action:UIAlertAction!) -> Void in
