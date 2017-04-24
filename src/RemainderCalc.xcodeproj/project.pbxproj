@@ -12,6 +12,7 @@
 		4104F9881E8DFC4400518089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4104F9861E8DFC4400518089 /* Main.storyboard */; };
 		4104F98A1E8DFC4400518089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4104F9891E8DFC4400518089 /* Assets.xcassets */; };
 		4104F98D1E8DFC4400518089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4104F98B1E8DFC4400518089 /* LaunchScreen.storyboard */; };
+		4105E3E41EADC344005F2851 /* RemainderCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105E3E31EADC344005F2851 /* RemainderCalc.swift */; };
 		41395C101E9CD92E00A2095D /* XIPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */; };
 		413CA2141EA5F34F00D98587 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413CA2161EA5F34F00D98587 /* Localizable.strings */; };
 		4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D11E94C0A9008B24BF /* MainViewController.swift */; };
@@ -31,6 +32,7 @@
 		4104F9891E8DFC4400518089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4104F98C1E8DFC4400518089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4104F98E1E8DFC4400518089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4105E3E31EADC344005F2851 /* RemainderCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderCalc.swift; sourceTree = "<group>"; };
 		41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingButton.swift; sourceTree = "<group>"; };
 		413CA2171EA5F35200D98587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4167D2D11E94C0A9008B24BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */,
 				413CA2161EA5F34F00D98587 /* Localizable.strings */,
 				417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */,
+				4105E3E31EADC344005F2851 /* RemainderCalc.swift */,
 			);
 			path = RemainderCalc;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				4104F9851E8DFC4400518089 /* ViewController.swift in Sources */,
 				41395C101E9CD92E00A2095D /* XIPaddingButton.swift in Sources */,
 				4104F9831E8DFC4400518089 /* AppDelegate.swift in Sources */,
+				4105E3E41EADC344005F2851 /* RemainderCalc.swift in Sources */,
 				41A51B7F1E9DF2F6009A3A41 /* XIPaddingLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

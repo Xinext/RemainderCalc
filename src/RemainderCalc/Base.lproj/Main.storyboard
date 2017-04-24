@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9HO-ib-iiI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9HO-ib-iiI">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--あまり割算電卓-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ModCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="RemainderCalc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -86,7 +86,7 @@
                                                             <constraint firstAttribute="height" id="hMe-N2-klx"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Q-f6-f6d" userLabel="ExpressionLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Q-f6-f6d" userLabel="ExpressionLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="60" height="40"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -142,7 +142,7 @@
                                                             <constraint firstAttribute="height" id="SLM-fW-7q1"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-sh-qMb" userLabel="AnswerLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-sh-qMb" userLabel="AnswerLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="47.5"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.58823529409999997" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -234,7 +234,7 @@
                                                             <constraint firstAttribute="height" id="W7W-Zk-jUl"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小数点の位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-FR-hhU" userLabel="DecimalPointTitleLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小数点の位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-FR-hhU" userLabel="DecimalPointTitleLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="138" height="46"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,7 +243,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-6M-NfV" userLabel="DecimalPointSpacer">
                                                         <rect key="frame" x="138" y="0.0" width="6" height="56"/>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w91-4N-ZQo" userLabel="DecimalPointDownButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w91-4N-ZQo" userLabel="DecimalPointDownButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="144" y="5" width="43.5" height="46"/>
                                                         <color key="backgroundColor" red="0.396078431372549" green="0.67450980392156867" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -255,14 +255,17 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="Action_DecimalPointDownButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Mlr-bP-Njp"/>
+                                                        </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-oN-8P1" userLabel="DecimalPointValueLabel" customClass="XIPaddingLabel" customModule="ModCalc" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-oN-8P1" userLabel="DecimalPointValueLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="187.5" y="5" width="57" height="46"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noE-1t-jeh" userLabel="DecimalPointUpButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noE-1t-jeh" userLabel="DecimalPointUpButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="244.5" y="5" width="43.5" height="46"/>
                                                         <color key="backgroundColor" red="0.39607843139999999" green="0.67450980390000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -274,6 +277,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="Action_DecimalPointUpButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="HTi-sw-h9u"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -320,7 +326,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-qB-SGi" userLabel="InputKeysAreaStackView1">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-Bd-xdh" userLabel="Key7Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-Bd-xdh" userLabel="Key7Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490196078434" green="0.65490196078431373" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -344,7 +350,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-ro-jJk" userLabel="Key8Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-ro-jJk" userLabel="Key8Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490196078434" green="0.65490196078431373" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -357,7 +363,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86F-Ib-wtD" userLabel="Key9Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86F-Ib-wtD" userLabel="Key9Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490196078434" green="0.65490196078431373" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -370,7 +376,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssK-fH-Q3i" userLabel="KeyACButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssK-fH-Q3i" userLabel="KeyACButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.78823529410000004" green="0.2274509804" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -388,7 +394,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bn9-cK-eLN" userLabel="InputKeysAreaStackView2">
                                                         <rect key="frame" x="0.0" y="55.5" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-F1-hjg" userLabel="Key4Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-F1-hjg" userLabel="Key4Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -401,7 +407,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-fI-YTf" userLabel="Key5Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-fI-YTf" userLabel="Key5Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -414,7 +420,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-ir-jj1" userLabel="Key6Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-ir-jj1" userLabel="Key6Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -427,7 +433,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-G9-Yx5" userLabel="KeyBSButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-G9-Yx5" userLabel="KeyBSButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.45490196078431372" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -445,7 +451,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-Cc-GKc" userLabel="InputKeysAreaStackView3">
                                                         <rect key="frame" x="0.0" y="111" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-bx-sVB" userLabel="Key1Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-bx-sVB" userLabel="Key1Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -458,7 +464,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-LT-Gh8" userLabel="Key2Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-LT-Gh8" userLabel="Key2Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -471,7 +477,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-3D-p1v" userLabel="Key3Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-3D-p1v" userLabel="Key3Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -500,7 +506,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-pf-Ibm" userLabel="InputKeysAreaStackView4">
                                                         <rect key="frame" x="0.0" y="166.5" width="288" height="45.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-gc-gnk" userLabel="Key0Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-gc-gnk" userLabel="Key0Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -513,7 +519,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-XA-Dx9" userLabel="Key00Button" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-XA-Dx9" userLabel="Key00Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -526,7 +532,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMX-3x-TPM" userLabel="KeyDotButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMX-3x-TPM" userLabel="KeyDotButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
                                                                 <color key="backgroundColor" red="0.33725490200000002" green="0.65490196079999996" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -568,7 +574,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-oV-HPN" userLabel="CalcKeysAreaStackView">
                                                 <rect key="frame" x="16" y="5" width="288" height="45.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfs-pn-ibq" userLabel="KeyDivideButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfs-pn-ibq" userLabel="KeyDivideButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="139" height="45.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.45490196078431372" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
@@ -584,7 +590,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-fM-zz5" userLabel="KeyEqualButton" customClass="XIPaddingButton" customModule="ModCalc" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-fM-zz5" userLabel="KeyEqualButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="149" y="0.0" width="139" height="45.5"/>
                                                         <color key="backgroundColor" red="0.78823529411764703" green="0.22745098039215686" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>

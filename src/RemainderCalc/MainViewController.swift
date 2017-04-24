@@ -47,13 +47,13 @@ class MainViewController: UIViewController {
 
     // MARK: - Private variable
     private var adMgr = AdModMgr()
+    private let remCalcMgr = RemainderCalculationManager()
     
     // MARK: - ViewController Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // AdMod manager
         adMgr.InitManager(pvc:self, cv:outletMainContentsView, lc: outletMainContentsBottomLayoutConstraint)
         
     }
@@ -72,6 +72,23 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Action method
+    /**
+     [Action] 小数点位置ダウンボタン 押下
+     */
+    @IBAction func Action_DecimalPointDownButton_TouchDown(_ sender: Any) {
+        remCalcMgr.DownDecimalPosition()
+        outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
+    }
+    
+    /**
+     [Action] 小数点位置アップボタン 押下
+     */
+    @IBAction func Action_DecimalPointUpButton_TouchDown(_ sender: Any) {
+        remCalcMgr.UpDecimalPosition()
+        outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
+    }
+    
     // MARK: - Internal method
 
     // MARK: - private method
@@ -79,6 +96,8 @@ class MainViewController: UIViewController {
      Initialize each view
      */
     private func initEachView() {
+        
+        outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
         
         //
         outletExpressionLabel.FontSizeToFit()
