@@ -21,6 +21,7 @@
 "STR_MAIN_EXP_LABEL" = "Exp.";
 "STR_MAIN_ANS_LABEL" = "Ans.";
 "STR_MAIN_DECPOS_LABEL" = "Decimals number";
+"STR_MAIN_ANSWER_ERROR_TEXT" = "Error";
 
 // MARK: - Main View
 "STR_HISTORY_VIEW_TITLE" = "Computation history";

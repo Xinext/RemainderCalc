@@ -21,6 +21,7 @@
 "STR_MAIN_EXP_LABEL" = "式";
 "STR_MAIN_ANS_LABEL" = "答え";
 "STR_MAIN_DECPOS_LABEL" = "小数点の位置";
+"STR_MAIN_ANSWER_ERROR_TEXT" = "エラー";
 
 // MARK: - Main View
 "STR_HISTORY_VIEW_TITLE" = "計算履歴";

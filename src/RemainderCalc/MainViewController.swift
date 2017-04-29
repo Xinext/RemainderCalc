@@ -61,8 +61,9 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.initEachView()
-        self.localizeEachItem()
+        initEachView()
+        localizeEachItem()
+        updateDisplayArea()
         
         adMgr.DispAdView(pos: AdModMgr.DISP_POSITION.BOTTOM)
     }
@@ -77,6 +78,7 @@ class MainViewController: UIViewController {
      [Action] 小数点位置ダウンボタン 押下
      */
     @IBAction func Action_DecimalPointDownButton_TouchDown(_ sender: Any) {
+
         remCalcMgr.DownDecimalPosition()
         outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
     }
@@ -87,6 +89,135 @@ class MainViewController: UIViewController {
     @IBAction func Action_DecimalPointUpButton_TouchDown(_ sender: Any) {
         remCalcMgr.UpDecimalPosition()
         outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
+    }
+    
+    /**
+     [Action] 0ボタン 押下
+     */
+    @IBAction func Action_Key0Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(0)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 00ボタン 押下
+     */
+    @IBAction func Action_Key00Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(0)
+        remCalcMgr.InputNumber(0)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 1ボタン 押下
+     */
+    @IBAction func Action_Key1Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(1)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 2ボタン 押下
+     */
+    @IBAction func Action_Key2Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(2)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 3ボタン 押下
+     */
+    @IBAction func Action_Key3Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(3)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 4ボタン 押下
+     */
+    @IBAction func Action_Key4Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(4)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 5ボタン 押下
+     */
+    @IBAction func Action_Key5Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(5)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 6ボタン 押下
+     */
+    @IBAction func Action_Key6Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(6)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 7ボタン 押下
+     */
+    @IBAction func Action_Key7Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(7)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 8ボタン 押下
+     */
+    @IBAction func Action_Key8Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(8)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 9ボタン 押下
+     */
+    @IBAction func Action_Key9Button_TouchDown(_ sender: Any) {
+        remCalcMgr.InputNumber(9)
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] ACボタン 押下
+     */
+    @IBAction func Action_KeyACButton_TouchDown(_ sender: Any) {
+        remCalcMgr.ExecuteAllClear()
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] 小数点ボタン 押下
+     */
+    @IBAction func Action_DotButton_TouchDown(_ sender: Any) {
+        remCalcMgr.InputDecimalPoint()
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] BSボタン 押下
+     */
+    @IBAction func Action_KeyBSButton_TouchDown(_ sender: Any) {
+        remCalcMgr.ExecuteBackSpace()
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] ÷ボタン 押下
+     */
+    @IBAction func Action_KeyDivideButton_TouchDown(_ sender: Any) {
+        remCalcMgr.DecideDividend()
+        updateDisplayArea()
+    }
+    
+    /**
+     [Action] =ボタン 押下
+     */
+    @IBAction func Action_KeyEqualButton_TouchDown(_ sender: Any) {
+        remCalcMgr.DecideDiviSor()
+        updateDisplayArea()
     }
     
     // MARK: - Internal method
@@ -128,6 +259,15 @@ class MainViewController: UIViewController {
         outletExpressionValueTextField.isUserInteractionEnabled = false
         outletAnswerValueTextField.isUserInteractionEnabled = false
         
+    }
+
+    /**
+     表示エリアの更新
+     */
+    private func updateDisplayArea() {
+        outletInputValuesTextField.text = remCalcMgr.InputValuesString
+        outletExpressionValueTextField.text = remCalcMgr.ExpressionString
+        outletAnswerValueTextField.text = remCalcMgr.AnswerString
     }
     
     /**

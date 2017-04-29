@@ -349,6 +349,9 @@
                                                                         <real key="value" value="5"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key7Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zm1-5t-H03"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-ro-jJk" userLabel="Key8Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
@@ -362,6 +365,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key8Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="N2q-gl-a8O"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86F-Ib-wtD" userLabel="Key9Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
@@ -375,6 +381,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key9Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ocE-A4-OzO"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssK-fH-Q3i" userLabel="KeyACButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
@@ -388,6 +397,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_KeyACButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="1Tw-Pb-x82"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -406,6 +418,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key4Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="O4w-2R-Xw9"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-fI-YTf" userLabel="Key5Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
@@ -419,6 +434,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key5Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="gfp-An-UdD"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-ir-jj1" userLabel="Key6Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
@@ -432,6 +450,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key6Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="3gy-Gz-nsy"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-G9-Yx5" userLabel="KeyBSButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
@@ -445,6 +466,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_KeyBSButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="iQr-MQ-wyK"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -463,6 +487,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key1Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="uNH-7x-Mis"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-LT-Gh8" userLabel="Key2Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
@@ -476,6 +503,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key2Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="JwA-lj-kJB"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-3D-p1v" userLabel="Key3Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
@@ -489,6 +519,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key3Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="VrA-9E-ewZ"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-PM-iC9" userLabel="KeyDummy1Button">
                                                                 <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
@@ -518,6 +551,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key0Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="nen-3M-5cY"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-XA-Dx9" userLabel="Key00Button" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="74.5" y="0.0" width="64.5" height="45.5"/>
@@ -531,6 +567,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_Key00Button_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ux6-zO-85O"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMX-3x-TPM" userLabel="KeyDotButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                                 <rect key="frame" x="149" y="0.0" width="64.5" height="45.5"/>
@@ -544,6 +583,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="TitleLabelAdjustsFontSizeToFitWidth" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="Action_DotButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="h8h-JP-3AF"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akM-D3-4tU" userLabel="KeyDummy2Button">
                                                                 <rect key="frame" x="223.5" y="0.0" width="64.5" height="45.5"/>
@@ -589,6 +631,9 @@
                                                                 <real key="value" value="0.10000000000000001"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="Action_KeyDivideButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cqn-NU-6k9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-fM-zz5" userLabel="KeyEqualButton" customClass="XIPaddingButton" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="149" y="0.0" width="139" height="45.5"/>
@@ -601,6 +646,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="Action_KeyEqualButton_TouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="SRR-vh-nWn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
