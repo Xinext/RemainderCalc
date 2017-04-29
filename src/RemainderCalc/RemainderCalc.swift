@@ -331,7 +331,7 @@ class RemainderCalculationManager {
             else {
                 
                 // 商を求める
-                decAnswer = decDividend.dividing(by: decDivisor, withBehavior: NSDecimalNumberHandler(roundingMode: .plain,
+                decAnswer = decDividend.dividing(by: decDivisor, withBehavior: NSDecimalNumberHandler(roundingMode: .down,
                                                                                                       scale: Int16(self._decPos),
                                                                                                       raiseOnExactness: false,
                                                                                                       raiseOnOverflow: false,
@@ -352,6 +352,7 @@ class RemainderCalculationManager {
                 resString += "..."
                 resString += decRemainder.stringValue
             }
+            
         }
         else {
             resString = ""
