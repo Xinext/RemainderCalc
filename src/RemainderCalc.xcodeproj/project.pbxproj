@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4104F9831E8DFC4400518089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4104F9821E8DFC4400518089 /* AppDelegate.swift */; };
-		4104F9851E8DFC4400518089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4104F9841E8DFC4400518089 /* ViewController.swift */; };
 		4104F9881E8DFC4400518089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4104F9861E8DFC4400518089 /* Main.storyboard */; };
 		4104F98A1E8DFC4400518089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4104F9891E8DFC4400518089 /* Assets.xcassets */; };
 		4104F98D1E8DFC4400518089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4104F98B1E8DFC4400518089 /* LaunchScreen.storyboard */; };
 		4105E3E41EADC344005F2851 /* RemainderCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105E3E31EADC344005F2851 /* RemainderCalc.swift */; };
 		41395C101E9CD92E00A2095D /* XIPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */; };
 		413CA2141EA5F34F00D98587 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413CA2161EA5F34F00D98587 /* Localizable.strings */; };
+		414CF68A1EB8AB7100148A5D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 414CF6881EB8AB7100148A5D /* Model.xcdatamodeld */; };
 		4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D11E94C0A9008B24BF /* MainViewController.swift */; };
 		4167D2D51E94D5AB008B24BF /* AdModDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D31E94D5AB008B24BF /* AdModDef.swift */; };
 		4167D2D61E94D5AB008B24BF /* AdModMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D41E94D5AB008B24BF /* AdModMgr.swift */; };
 		417471AE1EA71CAD00A0BDF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */; };
+		4175CD791EC45B09006E01EA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4175CD781EC45B09006E01EA /* HistoryTableViewController.swift */; };
+		4187130D1EC1865400691173 /* ModelMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187130C1EC1865400691173 /* ModelMgr.swift */; };
 		41A51B7F1E9DF2F6009A3A41 /* XIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */; };
 		41D2CF281E962964000468AE /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D2CF271E962964000468AE /* CommonUtility.swift */; };
 		B4D5EF321803ACE6F645BDBB /* Pods_RemainderCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */; };
@@ -27,7 +29,6 @@
 /* Begin PBXFileReference section */
 		4104F97F1E8DFC4400518089 /* RemainderCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemainderCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4104F9821E8DFC4400518089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4104F9841E8DFC4400518089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4104F9871E8DFC4400518089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4104F9891E8DFC4400518089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4104F98C1E8DFC4400518089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		4105E3E31EADC344005F2851 /* RemainderCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderCalc.swift; sourceTree = "<group>"; };
 		41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingButton.swift; sourceTree = "<group>"; };
 		413CA2171EA5F35200D98587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		414CF6891EB8AB7100148A5D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4167D2D11E94C0A9008B24BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4167D2D31E94D5AB008B24BF /* AdModDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModDef.swift; sourceTree = "<group>"; };
 		4167D2D41E94D5AB008B24BF /* AdModMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModMgr.swift; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		417471B11EA71CAF00A0BDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		417471B31EA71DE500A0BDF6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		417471B41EA71EE900A0BDF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4175CD781EC45B09006E01EA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		4187130C1EC1865400691173 /* ModelMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMgr.swift; sourceTree = "<group>"; };
 		41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingLabel.swift; sourceTree = "<group>"; };
 		41D2CF271E962964000468AE /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemainderCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +97,8 @@
 				4167D2D31E94D5AB008B24BF /* AdModDef.swift */,
 				4167D2D41E94D5AB008B24BF /* AdModMgr.swift */,
 				4104F9821E8DFC4400518089 /* AppDelegate.swift */,
-				4104F9841E8DFC4400518089 /* ViewController.swift */,
 				4167D2D11E94C0A9008B24BF /* MainViewController.swift */,
+				4175CD781EC45B09006E01EA /* HistoryTableViewController.swift */,
 				4104F9861E8DFC4400518089 /* Main.storyboard */,
 				4104F9891E8DFC4400518089 /* Assets.xcassets */,
 				4104F98B1E8DFC4400518089 /* LaunchScreen.storyboard */,
@@ -105,6 +109,8 @@
 				413CA2161EA5F34F00D98587 /* Localizable.strings */,
 				417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */,
 				4105E3E31EADC344005F2851 /* RemainderCalc.swift */,
+				414CF6881EB8AB7100148A5D /* Model.xcdatamodeld */,
+				4187130C1EC1865400691173 /* ModelMgr.swift */,
 			);
 			path = RemainderCalc;
 			sourceTree = "<group>";
@@ -245,13 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4187130D1EC1865400691173 /* ModelMgr.swift in Sources */,
 				4167D2D61E94D5AB008B24BF /* AdModMgr.swift in Sources */,
 				4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */,
 				4167D2D51E94D5AB008B24BF /* AdModDef.swift in Sources */,
 				41D2CF281E962964000468AE /* CommonUtility.swift in Sources */,
-				4104F9851E8DFC4400518089 /* ViewController.swift in Sources */,
 				41395C101E9CD92E00A2095D /* XIPaddingButton.swift in Sources */,
 				4104F9831E8DFC4400518089 /* AppDelegate.swift in Sources */,
+				4175CD791EC45B09006E01EA /* HistoryTableViewController.swift in Sources */,
+				414CF68A1EB8AB7100148A5D /* Model.xcdatamodeld in Sources */,
 				4105E3E41EADC344005F2851 /* RemainderCalc.swift in Sources */,
 				41A51B7F1E9DF2F6009A3A41 /* XIPaddingLabel.swift in Sources */,
 			);
@@ -339,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -384,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -400,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6N89BHW7Q5;
 				INFOPLIST_FILE = RemainderCalc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinext.RemainderCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6N89BHW7Q5;
 				INFOPLIST_FILE = RemainderCalc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinext.RemainderCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +453,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		414CF6881EB8AB7100148A5D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				414CF6891EB8AB7100148A5D /* Model.xcdatamodel */,
+			);
+			currentVersion = 414CF6891EB8AB7100148A5D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4104F9771E8DFC4300518089 /* Project object */;
 }

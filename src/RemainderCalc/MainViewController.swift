@@ -80,7 +80,7 @@ class MainViewController: UIViewController {
     @IBAction func Action_DecimalPointDownButton_TouchDown(_ sender: Any) {
 
         remCalcMgr.DownDecimalPosition()
-        outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
+        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString
     }
     
     /**
@@ -88,7 +88,7 @@ class MainViewController: UIViewController {
      */
     @IBAction func Action_DecimalPointUpButton_TouchDown(_ sender: Any) {
         remCalcMgr.UpDecimalPosition()
-        outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
+        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString
     }
     
     /**
@@ -218,6 +218,8 @@ class MainViewController: UIViewController {
     @IBAction func Action_KeyEqualButton_TouchDown(_ sender: Any) {
         remCalcMgr.DecideDiviSor()
         updateDisplayArea()
+        
+        saveDataForHistory()
     }
     
     // MARK: - Internal method
@@ -228,7 +230,7 @@ class MainViewController: UIViewController {
      */
     private func initEachView() {
         
-        outletDecimalPointValueLabel.text = remCalcMgr.DecPosString
+        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString
         
         //
         outletExpressionLabel.FontSizeToFit()
@@ -265,9 +267,9 @@ class MainViewController: UIViewController {
      表示エリアの更新
      */
     private func updateDisplayArea() {
-        outletInputValuesTextField.text = remCalcMgr.InputValuesString
-        outletExpressionValueTextField.text = remCalcMgr.ExpressionString
-        outletAnswerValueTextField.text = remCalcMgr.AnswerString
+        outletInputValuesTextField.text = remCalcMgr.P_InputValuesString
+        outletExpressionValueTextField.text = remCalcMgr.P_ExpressionString
+        outletAnswerValueTextField.text = remCalcMgr.P_AnswerString
     }
     
     /**
@@ -281,6 +283,24 @@ class MainViewController: UIViewController {
        outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
        outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
         
+    }
+    
+    /**
+     履歴用データの保存
+     */
+    private func saveDataForHistory() {
+        
+        ModelMgr.Save_D_History(setModel: { (data: D_History) -> Void in
+            
+            data.m_i_answer = outletAnswerValueTextField.text
+            data.m_i_expression = outletExpressionValueTextField.text
+            
+            data.m_i_decimal_position = remCalcMgr.P_DecimalPosition
+            data.m_i_divisor = remCalcMgr.P_DivisorValue
+            data.m_i_dividend = remCalcMgr.P_DividendValue
+            
+            data.m_k_update_time = NSDate()
+        })
     }
     
     /*

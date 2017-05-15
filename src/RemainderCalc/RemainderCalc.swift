@@ -32,18 +32,18 @@ class RemainderCalculationManager {
     
     // MARK: - public variable
     /**
-     小数点位置
+     [Property]小数点位置
      */
-    var DecPosString: String {
+    var P_DecPosString: String {
         get {
             return DispDecPosStrings[self._decPos]
         }
     }
     
     /**
-     入力値
+     [Property]入力値
      */
-    var InputValuesString: String {
+    var P_InputValuesString: String {
         get {
             switch _calcState {
             case .WAIT_DIVIDEND:
@@ -57,22 +57,62 @@ class RemainderCalculationManager {
     }
     
     /**
-     答え
+     [Property]答え
      */
-    var AnswerString: String {
+    var P_AnswerString: String {
         get {
             return getAnswerString()
         }
     }
     
     /**
-     式
+     [Property]式
      */
-    var ExpressionString: String {
+    var P_ExpressionString: String {
         get {
             return getExpressionString()
         }
     }
+    
+    /**
+     [Property]割られる値
+     */
+    var P_DividendValue: NSDecimalNumber {
+        get {
+            // 割られる値を取得
+            let decDividend = NSDecimalNumber(string: self._dividend)
+            if (decDividend.decimalValue.isNaN) {   // error
+                return NSDecimalNumber(string: "0.0")
+            }
+            
+            return decDividend
+        }
+    }
+    
+    /**
+     [Property]割る値
+     */
+    var P_DivisorValue: NSDecimalNumber {
+        get {
+            // 割られる値を取得
+            let decDivisor = NSDecimalNumber(string: self._divisor)
+            if (decDivisor.decimalValue.isNaN) {   // error
+                return NSDecimalNumber(string: "0.0")
+            }
+            
+            return decDivisor
+        }
+    }
+
+    /**
+     [Property]小数点位置
+     */
+    var P_DecimalPosition: Int16 {
+        get {
+            return Int16(self._decPos)
+        }
+    }
+    
     
     // MARK: - Initializer
     /**
@@ -322,7 +362,7 @@ class RemainderCalculationManager {
             var decAnswer: NSDecimalNumber
             var decRemainder = NSDecimalNumber(string: "0")
             
-            if ( NSDecimalNumber(string: DecPosString).decimalValue.isNaN) {    // 余りFree
+            if ( NSDecimalNumber(string: P_DecPosString).decimalValue.isNaN) {    // 余りFree
                 decAnswer = decDividend.dividing(by: decDivisor)
                 if (decAnswer.decimalValue.isNaN) {
                     return NSLocalizedString("STR_MAIN_ANSWER_ERROR_TEXT", comment: "")
