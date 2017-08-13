@@ -128,6 +128,16 @@ class RemainderCalculationManager {
     
     // MARK: - public method
     /**
+     計算に関連する値のみ初期化する。
+     (without decimal position)
+     */
+    func InitValuesForCalc() {
+        self._calcState = .WAIT_DIVIDEND
+        self._dividend = ""
+        self._divisor = ""
+    }
+    
+    /**
      小数点位置を１大きくする
      最大を超える場合は無視する
      */

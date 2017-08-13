@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var outletMainContentsView: UIView!
     @IBOutlet weak var outletMainContentsBottomLayoutConstraint: NSLayoutConstraint!
     
-    //タイトルエリア
+    // タイトルエリア
     @IBOutlet weak var outletNavigationItem: UINavigationItem!  // アプリタイトル
     @IBOutlet weak var outletHistoryButton: UIBarButtonItem!    // 履歴ボタン
     
@@ -47,23 +47,25 @@ class MainViewController: UIViewController {
 
     // MARK: - Private variable
     private var adMgr = AdModMgr()
-    private let remCalcMgr = RemainderCalculationManager()
     
     // MARK: - ViewController Override
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        // 広告マネージャーの初期化
         adMgr.InitManager(pvc:self, cv:outletMainContentsView, lc: outletMainContentsBottomLayoutConstraint)
         
+        // Viewの初期化
+        initConfigOfEachView()
+        localizeEachItem()
+
+        // ステートマネージャーの初期化
+        procStateMgr(.INIT)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        initEachView()
-        localizeEachItem()
-        updateDisplayArea()
         
         adMgr.DispAdView(pos: AdModMgr.DISP_POSITION.BOTTOM)
     }
@@ -73,216 +75,444 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Action method
+    // MARK: - View method
     /**
-     [Action] 小数点位置ダウンボタン 押下
+     Initialize the configuration of each view
      */
-    @IBAction func Action_DecimalPointDownButton_TouchDown(_ sender: Any) {
-
-        remCalcMgr.DownDecimalPosition()
-        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString
-    }
-    
-    /**
-     [Action] 小数点位置アップボタン 押下
-     */
-    @IBAction func Action_DecimalPointUpButton_TouchDown(_ sender: Any) {
-        remCalcMgr.UpDecimalPosition()
-        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString
-    }
-    
-    /**
-     [Action] 0ボタン 押下
-     */
-    @IBAction func Action_Key0Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(0)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 00ボタン 押下
-     */
-    @IBAction func Action_Key00Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(0)
-        remCalcMgr.InputNumber(0)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 1ボタン 押下
-     */
-    @IBAction func Action_Key1Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(1)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 2ボタン 押下
-     */
-    @IBAction func Action_Key2Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(2)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 3ボタン 押下
-     */
-    @IBAction func Action_Key3Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(3)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 4ボタン 押下
-     */
-    @IBAction func Action_Key4Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(4)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 5ボタン 押下
-     */
-    @IBAction func Action_Key5Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(5)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 6ボタン 押下
-     */
-    @IBAction func Action_Key6Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(6)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 7ボタン 押下
-     */
-    @IBAction func Action_Key7Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(7)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 8ボタン 押下
-     */
-    @IBAction func Action_Key8Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(8)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 9ボタン 押下
-     */
-    @IBAction func Action_Key9Button_TouchDown(_ sender: Any) {
-        remCalcMgr.InputNumber(9)
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] ACボタン 押下
-     */
-    @IBAction func Action_KeyACButton_TouchDown(_ sender: Any) {
-        remCalcMgr.ExecuteAllClear()
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] 小数点ボタン 押下
-     */
-    @IBAction func Action_DotButton_TouchDown(_ sender: Any) {
-        remCalcMgr.InputDecimalPoint()
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] BSボタン 押下
-     */
-    @IBAction func Action_KeyBSButton_TouchDown(_ sender: Any) {
-        remCalcMgr.ExecuteBackSpace()
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] ÷ボタン 押下
-     */
-    @IBAction func Action_KeyDivideButton_TouchDown(_ sender: Any) {
-        remCalcMgr.DecideDividend()
-        updateDisplayArea()
-    }
-    
-    /**
-     [Action] =ボタン 押下
-     */
-    @IBAction func Action_KeyEqualButton_TouchDown(_ sender: Any) {
-        remCalcMgr.DecideDiviSor()
-        updateDisplayArea()
+    private func initConfigOfEachView() {
         
-        saveDataForHistory()
-    }
-    
-    // MARK: - Internal method
-
-    // MARK: - private method
-    /**
-     Initialize each view
-     */
-    private func initEachView() {
-        
-        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString
-        
-        //
+        // 表示エリア
+        outletInputValuesTextField.isUserInteractionEnabled = false
         outletExpressionLabel.FontSizeToFit()
+        outletExpressionValueTextField.isUserInteractionEnabled = false
         outletAnswerLabel.FontSizeToFit()
+        outletAnswerValueTextField.isUserInteractionEnabled = false
         outletDecimalPointTitleLabel.FontSizeToFit()
         outletDecimalPointDownButton.FontSizeToFit()
         outletDecimalPointValueLabel.FontSizeToFit()
         outletDecimalPointUpButton.FontSizeToFit()
+        
+        // 入力エリア
         outletKey0Button.FontSizeToFit()
         outletKey00Button.FontSizeToFit()
-        
+        outletKey1Button.FontSizeToFit()
+        outletKey2Button.FontSizeToFit()
+        outletKey3Button.FontSizeToFit()
+        outletKey4Button.FontSizeToFit()
+        outletKey5Button.FontSizeToFit()
+        outletKey6Button.FontSizeToFit()
         outletKey7Button.FontSizeToFit()
         outletKey8Button.FontSizeToFit()
         outletKey9Button.FontSizeToFit()
         outletKeyACButton.FontSizeToFit()
-        outletKey4Button.FontSizeToFit()
-        outletKey5Button.FontSizeToFit()
-        outletKey6Button.FontSizeToFit()
         outletKeyBSButton.FontSizeToFit()
-        outletKey1Button.FontSizeToFit()
-        outletKey2Button.FontSizeToFit()
-        outletKey3Button.FontSizeToFit()
         outletKeyDotButton.FontSizeToFit()
         outletKeyDivideButton.FontSizeToFit()
         outletKeyEqualButton.FontSizeToFit()
-        
-        outletInputValuesTextField.isUserInteractionEnabled = false
-        outletExpressionValueTextField.isUserInteractionEnabled = false
-        outletAnswerValueTextField.isUserInteractionEnabled = false
-        
-    }
-
-    /**
-     表示エリアの更新
-     */
-    private func updateDisplayArea() {
-        outletInputValuesTextField.text = remCalcMgr.P_InputValuesString
-        outletExpressionValueTextField.text = remCalcMgr.P_ExpressionString
-        outletAnswerValueTextField.text = remCalcMgr.P_AnswerString
     }
     
     /**
      localize each item
      */
     private func localizeEachItem() {
-     
-       outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
-       outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
-       outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
-       outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
-       outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
         
+        outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
+        outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
+        outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
+        outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
+        outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
+        
+    }
+    
+    // MARK: - Action method
+    /**
+     [Action] 小数点位置ダウンボタン 押下
+     */
+    @IBAction func Action_DecimalPointDownButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_DECPOS_DOWN)
+    }
+    
+    /**
+     [Action] 小数点位置アップボタン 押下
+     */
+    @IBAction func Action_DecimalPointUpButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_DECPOS_UP)
+    }
+    
+    /**
+     [Action] 0ボタン 押下
+     */
+    @IBAction func Action_Key0Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 0 as AnyObject)
+    }
+    
+    /**
+     [Action] 00ボタン 押下
+     */
+    @IBAction func Action_Key00Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 0 as AnyObject)
+        procStateMgr(.TAP_NUM, 0 as AnyObject)
+    }
+    
+    /**
+     [Action] 1ボタン 押下
+     */
+    @IBAction func Action_Key1Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 1 as AnyObject)
+    }
+    
+    /**
+     [Action] 2ボタン 押下
+     */
+    @IBAction func Action_Key2Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 2 as AnyObject)
+    }
+    
+    /**
+     [Action] 3ボタン 押下
+     */
+    @IBAction func Action_Key3Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 3 as AnyObject)
+    }
+    
+    /**
+     [Action] 4ボタン 押下
+     */
+    @IBAction func Action_Key4Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 4 as AnyObject)
+    }
+    
+    /**
+     [Action] 5ボタン 押下
+     */
+    @IBAction func Action_Key5Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 5 as AnyObject)
+    }
+    
+    /**
+     [Action] 6ボタン 押下
+     */
+    @IBAction func Action_Key6Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 6 as AnyObject)
+    }
+    
+    /**
+     [Action] 7ボタン 押下
+     */
+    @IBAction func Action_Key7Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 7 as AnyObject)
+    }
+    
+    /**
+     [Action] 8ボタン 押下
+     */
+    @IBAction func Action_Key8Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 8 as AnyObject)
+    }
+    
+    /**
+     [Action] 9ボタン 押下
+     */
+    @IBAction func Action_Key9Button_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_NUM, 9 as AnyObject)
+    }
+    
+    /**
+     [Action] ACボタン 押下
+     */
+    @IBAction func Action_KeyACButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_AC)
+    }
+    
+    /**
+     [Action] 小数点ボタン 押下
+     */
+    @IBAction func Action_DotButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_DP)
+    }
+    
+    /**
+     [Action] BSボタン 押下
+     */
+    @IBAction func Action_KeyBSButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_BS)
+    }
+    
+    /**
+     [Action] ÷ボタン 押下
+     */
+    @IBAction func Action_KeyDivideButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_DIV)
+    }
+    
+    /**
+     [Action] =ボタン 押下
+     */
+    @IBAction func Action_KeyEqualButton_TouchDown(_ sender: Any) {
+        procStateMgr(.TAP_EQ)
+    }
+ 
+    // MARK: - State Procedure
+    // MARK: - State Procedure (変数・定義)
+    /**
+     ステート定義
+    */
+    private enum PROC_STATE {
+        case WAIT_DIVIDEND  // 割られる値入力待ち 状態 (IDLE)
+        case WAIT_DIVISOR   // 割る値入力待ち 状態
+        case VIEW_ANSWER    // 答え表示 状態
+        case MAXNUM         // イリーガル状態チェック用
+    }
+    private var procState: PROC_STATE = PROC_STATE.WAIT_DIVIDEND
+    
+    /**
+     イベント定義
+     */
+    private enum PROC_EVENT {
+        case INIT               // 初期化
+        case TAP_DECPOS_UP      // 小数点位置Upボタン押下
+        case TAP_DECPOS_DOWN    // 小数点位置Downボタン押下
+        case TAP_NUM            // 数字ボタン(0,00,1,2,3,4,5,6,7,8,9)押下
+        case TAP_DP             // 小数点ボタン
+        case TAP_AC             // ACボタン押下
+        case TAP_BS             // ←ボタン押下
+        case TAP_DIV            // ÷ボタン押下
+        case TAP_EQ             // =ボタン押下
+        case MAXNUM             // イリーガルイベントチェック用
+    }
+    
+    /**
+     あまり割算計算マネージャー
+     */
+    private let remCalcMgr = RemainderCalculationManager()
+
+    // MARK: - State Procedure (ステートマネージャー処理)
+    /**
+     Initialization of processing
+     - parameter event: Occurred Event
+     - parameter param: The parameter of event
+     - returns: nothing
+     */
+    private func procStateMgr( _ event: PROC_EVENT,  _ param: AnyObject? = nil) {
+        
+        // The common event processing for all state.
+        switch event {
+        case .INIT, .TAP_AC:
+            initStateMgr()
+            return
+        default:
+            // no action
+            break;
+        }
+        
+        // Event driven processing
+        switch procState {
+        case .WAIT_DIVIDEND:
+            procstatemgr_Evt_WaitDividend( event, param: param )
+        case .WAIT_DIVISOR:
+            procstatemgr_Evt_WaitDivisor( event, param: param )
+        case .VIEW_ANSWER:
+            procstatemgr_Evt_ViewAnswer( event, param: param )
+        default:    // Illegal state
+            initStateMgr()
+            break;
+        }
+    }
+
+    /**
+     [Event Driven] State: Wait dividend
+     - parameter event: Occurred Event
+     - parameter param: The parameter of event
+     - returns: nothing
+     */
+    private func procstatemgr_Evt_WaitDividend( _ event: PROC_EVENT, param: AnyObject?) {
+        
+        switch event {
+        case .INIT: // common processing event
+            break
+        case .TAP_DECPOS_UP:
+            evt_TAP_DECPOS_UP()
+        case .TAP_DECPOS_DOWN:
+            evt_TAP_DECPOS_DOWN()
+        case .TAP_NUM:
+            evt_TAP_NUM(param as! Int)
+            break
+        case .TAP_DP:
+            evt_TAP_DP()
+            break
+        case .TAP_AC:   // common processing event
+            // common processing event
+            break
+        case .TAP_BS:
+            evt_TAP_BS()
+            break
+        case .TAP_DIV:
+            remCalcMgr.DecideDividend()
+            updateTextInDisplayArea()
+            procState = .WAIT_DIVISOR
+            break
+        case .TAP_EQ:
+            // ignore
+            break
+        default:    // Illegal event
+            evt_ErrorHandling()
+            procState = .WAIT_DIVIDEND
+            break;
+        }
+    }
+    
+    /**
+     [Event Driven] State: Wait divisor
+     - parameter event: Occurred Event
+     - parameter param: The parameter of event
+     - returns: nothing
+     */
+    private func procstatemgr_Evt_WaitDivisor( _ event: PROC_EVENT, param: AnyObject?) {
+        
+        switch event {
+        case .INIT: // common processing event
+            break
+        case .TAP_DECPOS_UP:
+            evt_TAP_DECPOS_UP()
+        case .TAP_DECPOS_DOWN:
+            evt_TAP_DECPOS_DOWN()
+        case .TAP_NUM:
+            evt_TAP_NUM(param as! Int)
+            break
+        case .TAP_DP:
+            evt_TAP_DP()
+            break
+        case .TAP_AC:   // common processing event
+            // common processing event
+            break
+        case .TAP_BS:
+            evt_TAP_BS()
+            break
+        case .TAP_DIV:
+            // ignore
+            break
+        case .TAP_EQ:
+            remCalcMgr.DecideDiviSor()
+            saveDataForHistory()
+            procState = .VIEW_ANSWER
+            updateTextInDisplayArea()
+            break
+        default:    // Illegal event
+            evt_ErrorHandling()
+            procState = .WAIT_DIVIDEND
+            break;
+        }
+    }
+    
+    /**
+     [Event Driven] State: View answer
+     - parameter event: Occurred Event
+     - parameter param: The parameter of event
+     - returns: nothing
+     */
+    private func procstatemgr_Evt_ViewAnswer( _ event: PROC_EVENT, param: AnyObject?) {
+        switch event {
+        case .INIT: // common processing event
+            break
+        case .TAP_DECPOS_UP:
+            // ignore
+            break
+        case .TAP_DECPOS_DOWN:
+            // ignore
+            break
+        case .TAP_NUM:
+            // ignore
+            break
+        case .TAP_DP:
+            // ignore
+            break
+        case .TAP_AC:   // common processing event
+            // common processing event
+            break
+        case .TAP_BS:
+            // ignore
+            break
+        case .TAP_DIV:
+            // ignore
+            break
+        case .TAP_EQ:
+            // ignore
+            break
+        default:    // Illegal event
+            evt_ErrorHandling()
+            procState = .WAIT_DIVIDEND
+            break;
+        }
+    }
+    
+    // MARK: - State Procedure (イベント共通処理)
+    /**
+     TAP_DECPOS_UP
+     */
+    func evt_TAP_DECPOS_UP() {
+        remCalcMgr.UpDecimalPosition()
+        updateTextInDisplayArea()
+    }
+    
+    /**
+     TAP_DECPOS_DOWN
+     */
+    func evt_TAP_DECPOS_DOWN() {
+        remCalcMgr.DownDecimalPosition()
+        updateTextInDisplayArea()
+    }
+    
+    /**
+     TAP_NUM
+     */
+    func evt_TAP_NUM(_ number: Int) {
+        remCalcMgr.InputNumber(number)
+        updateTextInDisplayArea()
+    }
+    
+    /**
+     TAP_BS
+     */
+    func evt_TAP_BS() {
+        remCalcMgr.ExecuteBackSpace()
+        updateTextInDisplayArea()
+    }
+    
+    /**
+     TAP_DP
+     */
+    func evt_TAP_DP() {
+        remCalcMgr.DecideDividend()
+        updateTextInDisplayArea()
+    }
+    
+    /**
+     Error Handling
+     */
+    func evt_ErrorHandling() {
+        initStateMgr()
+        updateTextInDisplayArea()
+    }
+    
+    // MARK: - State Procedure (サブルーチン処理)
+    /**
+     Initialization state procedures
+     */
+    private func initStateMgr() {
+        remCalcMgr.InitValuesForCalc()
+        procState = .WAIT_DIVIDEND
+        updateTextInDisplayArea()
+    }
+
+    /**
+     Update text in display area
+     */
+    private func updateTextInDisplayArea() {
+        
+        outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString           // 小数点位置
+        outletInputValuesTextField.text = remCalcMgr.P_InputValuesString        // 入力値
+        outletExpressionValueTextField.text = remCalcMgr.P_ExpressionString     // 式
+        outletAnswerValueTextField.text = remCalcMgr.P_AnswerString             // 答え
     }
     
     /**
@@ -292,8 +522,8 @@ class MainViewController: UIViewController {
         
         ModelMgr.Save_D_History(setModel: { (data: D_History) -> Void in
             
-            data.m_i_answer = outletAnswerValueTextField.text
-            data.m_i_expression = outletExpressionValueTextField.text
+            data.m_i_answer = remCalcMgr.P_AnswerString
+            data.m_i_expression = remCalcMgr.P_ExpressionString
             
             data.m_i_decimal_position = remCalcMgr.P_DecimalPosition
             data.m_i_divisor = remCalcMgr.P_DivisorValue
@@ -302,15 +532,4 @@ class MainViewController: UIViewController {
             data.m_k_update_time = NSDate()
         })
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
