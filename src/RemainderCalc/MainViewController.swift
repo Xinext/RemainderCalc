@@ -482,7 +482,7 @@ class MainViewController: UIViewController {
      TAP_DP
      */
     func evt_TAP_DP() {
-        remCalcMgr.DecideDividend()
+        remCalcMgr.InputDecimalPoint()
         updateTextInDisplayArea()
     }
     
