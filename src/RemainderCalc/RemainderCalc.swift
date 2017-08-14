@@ -107,9 +107,9 @@ class RemainderCalculationManager {
     /**
      [Property]小数点位置
      */
-    var P_DecimalPosition: Int16 {
+    var P_DecimalPosition: Int {
         get {
-            return Int16(self._decPos)
+            return self._decPos
         }
     }
     
@@ -155,6 +155,20 @@ class RemainderCalculationManager {
         
         if ( _decPos > 0 ) {
             _decPos -= 1
+        }
+    }
+    
+    /**
+     小数点位置を設定
+     設定範囲外になる場合は0とする
+     */
+    func SetDecimalPosition(_ dp: Int) {
+        
+        if ( (_decPos >= 0) && (_decPos <= (DispDecPosStrings.count-1)) ) {
+            _decPos = dp
+        }
+        else {
+            _decPos = 0
         }
     }
     

@@ -297,7 +297,11 @@ class MainViewController: UIViewController {
         
         // The common event processing for all state.
         switch event {
-        case .INIT, .TAP_AC:
+        case .INIT:
+            remCalcMgr.SetDecimalPosition(AppPreference.GetDecimalPoint())
+            initStateMgr()
+            return
+        case .TAP_AC:
             initStateMgr()
             return
         default:
@@ -451,6 +455,7 @@ class MainViewController: UIViewController {
      */
     func evt_TAP_DECPOS_UP() {
         remCalcMgr.UpDecimalPosition()
+        AppPreference.SetDecimalPoint(value: remCalcMgr.P_DecimalPosition)
         updateTextInDisplayArea()
     }
     
@@ -459,6 +464,7 @@ class MainViewController: UIViewController {
      */
     func evt_TAP_DECPOS_DOWN() {
         remCalcMgr.DownDecimalPosition()
+        AppPreference.SetDecimalPoint(value: remCalcMgr.P_DecimalPosition)
         updateTextInDisplayArea()
     }
     
@@ -525,7 +531,7 @@ class MainViewController: UIViewController {
             data.m_i_answer = remCalcMgr.P_AnswerString
             data.m_i_expression = remCalcMgr.P_ExpressionString
             
-            data.m_i_decimal_position = remCalcMgr.P_DecimalPosition
+            data.m_i_decimal_position = Int16(remCalcMgr.P_DecimalPosition)
             data.m_i_divisor = remCalcMgr.P_DivisorValue
             data.m_i_dividend = remCalcMgr.P_DividendValue
             
