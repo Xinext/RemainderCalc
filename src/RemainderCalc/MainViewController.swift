@@ -300,13 +300,12 @@ class MainViewController: UIViewController {
         case .INIT:
             remCalcMgr.SetDecimalPosition(AppPreference.GetDecimalPoint())
             initStateMgr()
-            return
         case .TAP_AC:
             initStateMgr()
-            return
         default:
             // no action
             break;
+            
         }
         
         // Event driven processing
@@ -321,6 +320,10 @@ class MainViewController: UIViewController {
             initStateMgr()
             break;
         }
+        
+        // State driven processing
+        changeViewItemColorForState(state: procState)
+
     }
 
     /**
@@ -519,6 +522,95 @@ class MainViewController: UIViewController {
         outletInputValuesTextField.text = remCalcMgr.P_InputValuesString        // 入力値
         outletExpressionValueTextField.text = remCalcMgr.P_ExpressionString     // 式
         outletAnswerValueTextField.text = remCalcMgr.P_AnswerString             // 答え
+    }
+    
+    /**
+     Change the color of each view item color for each state.
+     */
+    private func changeViewItemColorForState(state: PROC_STATE) {
+        
+        switch state {
+        case .WAIT_DIVIDEND:
+            outletInputValuesTextField.backgroundColor = UIColor.white
+            outletExpressionValueTextField.backgroundColor = UIColor.lightGray
+            outletAnswerValueTextField.backgroundColor = UIColor.lightGray
+            
+            outletDecimalPointDownButton.tintColor = UIColor.white
+            outletDecimalPointUpButton.tintColor = UIColor.white
+            
+            outletKey0Button.tintColor = UIColor.white
+            outletKey00Button.tintColor = UIColor.white
+            outletKey1Button.tintColor = UIColor.white
+            outletKey2Button.tintColor = UIColor.white
+            outletKey3Button.tintColor = UIColor.white
+            outletKey4Button.tintColor = UIColor.white
+            outletKey5Button.tintColor = UIColor.white
+            outletKey6Button.tintColor = UIColor.white
+            outletKey7Button.tintColor = UIColor.white
+            outletKey8Button.tintColor = UIColor.white
+            outletKey9Button.tintColor = UIColor.white
+            outletKeyDotButton.tintColor = UIColor.white
+            
+            outletKeyACButton.tintColor = UIColor.white
+            outletKeyBSButton.tintColor = UIColor.white
+            outletKeyDivideButton.tintColor = UIColor.white
+            outletKeyEqualButton.tintColor = UIColor.lightGray
+            
+        case .WAIT_DIVISOR:
+            outletInputValuesTextField.backgroundColor = UIColor.white
+            outletExpressionValueTextField.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
+            outletAnswerValueTextField.backgroundColor = UIColor.lightGray
+            
+            outletDecimalPointDownButton.tintColor = UIColor.white
+            outletDecimalPointUpButton.tintColor = UIColor.white
+            
+            outletKey0Button.tintColor = UIColor.white
+            outletKey00Button.tintColor = UIColor.white
+            outletKey1Button.tintColor = UIColor.white
+            outletKey2Button.tintColor = UIColor.white
+            outletKey3Button.tintColor = UIColor.white
+            outletKey4Button.tintColor = UIColor.white
+            outletKey5Button.tintColor = UIColor.white
+            outletKey6Button.tintColor = UIColor.white
+            outletKey7Button.tintColor = UIColor.white
+            outletKey8Button.tintColor = UIColor.white
+            outletKey9Button.tintColor = UIColor.white
+            outletKeyDotButton.tintColor = UIColor.white
+            
+            outletKeyACButton.tintColor = UIColor.white
+            outletKeyBSButton.tintColor = UIColor.white
+            outletKeyDivideButton.tintColor = UIColor.lightGray
+            outletKeyEqualButton.tintColor = UIColor.white
+        
+        case .VIEW_ANSWER:
+            outletInputValuesTextField.backgroundColor = UIColor.lightGray
+            outletExpressionValueTextField.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
+            outletAnswerValueTextField.backgroundColor = UIColor.hexStr(hexStr: "EAC7CD", alpha: 1.0)
+            
+            outletDecimalPointDownButton.tintColor = UIColor.lightGray
+            outletDecimalPointUpButton.tintColor = UIColor.lightGray
+            
+            outletKey0Button.tintColor = UIColor.lightGray
+            outletKey00Button.tintColor = UIColor.lightGray
+            outletKey1Button.tintColor = UIColor.lightGray
+            outletKey2Button.tintColor = UIColor.lightGray
+            outletKey3Button.tintColor = UIColor.lightGray
+            outletKey4Button.tintColor = UIColor.lightGray
+            outletKey5Button.tintColor = UIColor.lightGray
+            outletKey6Button.tintColor = UIColor.lightGray
+            outletKey7Button.tintColor = UIColor.lightGray
+            outletKey8Button.tintColor = UIColor.lightGray
+            outletKey9Button.tintColor = UIColor.lightGray
+            outletKeyDotButton.tintColor = UIColor.lightGray
+            
+            outletKeyACButton.tintColor = UIColor.white
+            outletKeyBSButton.tintColor = UIColor.lightGray
+            outletKeyDivideButton.tintColor = UIColor.lightGray
+            outletKeyEqualButton.tintColor = UIColor.lightGray
+            
+        default:
+            break
+        }
     }
     
     /**

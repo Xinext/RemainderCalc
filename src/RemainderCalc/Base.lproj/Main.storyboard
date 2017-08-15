@@ -104,7 +104,7 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789012÷123456789012" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-Jb-Ibp" userLabel="ExpressionValueTextField">
                                                         <rect key="frame" x="66" y="5" width="234" height="40"/>
-                                                        <color key="backgroundColor" red="0.6470588235294118" green="0.81960784313725488" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.44705882352941173" green="0.5490196078431373" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -160,7 +160,7 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890...12345" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="dsQ-4b-CXg" userLabel="AnswerValueTextField">
                                                         <rect key="frame" x="66" y="0.0" width="234" height="47.5"/>
-                                                        <color key="backgroundColor" red="0.91764705882352937" green="0.7803921568627451" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.61088604007275582" green="0.53802575154654375" blue="0.54951621031662257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -248,9 +248,8 @@
                                                         <rect key="frame" x="144" y="5" width="43.5" height="46"/>
                                                         <color key="backgroundColor" red="0.396078431372549" green="0.67450980392156867" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
-                                                        <state key="normal" title="&lt;">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="&lt;"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
@@ -270,9 +269,8 @@
                                                         <rect key="frame" x="244.5" y="5" width="43.5" height="46"/>
                                                         <color key="backgroundColor" red="0.39607843139999999" green="0.67450980390000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
-                                                        <state key="normal" title="&gt;">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="&gt;"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
