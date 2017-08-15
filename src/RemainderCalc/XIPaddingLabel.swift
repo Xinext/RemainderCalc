@@ -57,6 +57,23 @@ class XIPaddingLabel: UILabel {
         }
     }
     
+    // MARK: - UILabel Override
+    private var _padding: UIEdgeInsets {
+        return UIEdgeInsets(top: PaddingTop, left: PaddingLeft, bottom: PaddingBottom, right: PaddingRight)
+    }
+
+    override func drawText(in rect: CGRect) {
+        let newRect = UIEdgeInsetsInsetRect(rect, _padding)
+        super.drawText(in: newRect)
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        var contentSize = super.intrinsicContentSize
+        contentSize.height += _padding.top + _padding.bottom
+        contentSize.width += _padding.left + _padding.right
+        return contentSize
+    }
+    
     // MARK: - Public method
     /**
      Adjust font size according to padding setting.

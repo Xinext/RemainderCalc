@@ -19,9 +19,9 @@ class MainViewController: UIViewController {
     // 表示エリア
     @IBOutlet weak var outletInputValuesTextField: UITextField!         // 入力値テキスト
     @IBOutlet weak var outletExpressionLabel: XIPaddingLabel!           // 式タイトルラベル
-    @IBOutlet weak var outletExpressionValueTextField: UITextField!     // 式テキスト
-    @IBOutlet weak var outletAnswerLabel: XIPaddingLabel!               // 答えタイトル
-    @IBOutlet weak var outletAnswerValueTextField: UITextField!         // 答えテキスト
+    @IBOutlet weak var outletExpressionValueLabel: XIPaddingLabel!      // 式テキストラベル
+    @IBOutlet weak var outletAnswerLabel: XIPaddingLabel!               // 答えタイトルラベル
+    @IBOutlet weak var outletAnswerValueLabel: XIPaddingLabel!          // 答えテキストラベル
     @IBOutlet weak var outletDecimalPointTitleLabel: XIPaddingLabel!    // 小数点位置タイトルラベル
     @IBOutlet weak var outletDecimalPointDownButton: XIPaddingButton!   // 小数点Downボタン
     @IBOutlet weak var outletDecimalPointValueLabel: XIPaddingLabel!    // 小数点位置テキスト
@@ -55,10 +55,6 @@ class MainViewController: UIViewController {
         
         // 広告マネージャーの初期化
         adMgr.InitManager(pvc:self, cv:outletMainContentsView, lc: outletMainContentsBottomLayoutConstraint)
-        
-        // Viewの初期化
-        initConfigOfEachView()
-        localizeEachItem()
 
         // ステートマネージャーの初期化
         procStateMgr(.INIT)
@@ -74,56 +70,7 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - View method
-    /**
-     Initialize the configuration of each view
-     */
-    private func initConfigOfEachView() {
-        
-        // 表示エリア
-        outletInputValuesTextField.isUserInteractionEnabled = false
-        outletExpressionLabel.FontSizeToFit()
-        outletExpressionValueTextField.isUserInteractionEnabled = false
-        outletAnswerLabel.FontSizeToFit()
-        outletAnswerValueTextField.isUserInteractionEnabled = false
-        outletDecimalPointTitleLabel.FontSizeToFit()
-        outletDecimalPointDownButton.FontSizeToFit()
-        outletDecimalPointValueLabel.FontSizeToFit()
-        outletDecimalPointUpButton.FontSizeToFit()
-        
-        // 入力エリア
-        outletKey0Button.FontSizeToFit()
-        outletKey00Button.FontSizeToFit()
-        outletKey1Button.FontSizeToFit()
-        outletKey2Button.FontSizeToFit()
-        outletKey3Button.FontSizeToFit()
-        outletKey4Button.FontSizeToFit()
-        outletKey5Button.FontSizeToFit()
-        outletKey6Button.FontSizeToFit()
-        outletKey7Button.FontSizeToFit()
-        outletKey8Button.FontSizeToFit()
-        outletKey9Button.FontSizeToFit()
-        outletKeyACButton.FontSizeToFit()
-        outletKeyBSButton.FontSizeToFit()
-        outletKeyDotButton.FontSizeToFit()
-        outletKeyDivideButton.FontSizeToFit()
-        outletKeyEqualButton.FontSizeToFit()
-    }
-    
-    /**
-     localize each item
-     */
-    private func localizeEachItem() {
-        
-        outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
-        outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
-        outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
-        outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
-        outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
-        
-    }
-    
+
     // MARK: - Action method
     /**
      [Action] 小数点位置ダウンボタン 押下
@@ -298,6 +245,9 @@ class MainViewController: UIViewController {
         // The common event processing for all state.
         switch event {
         case .INIT:
+            // Viewの初期化
+            initConfigOfEachView()
+            localizeEachItem()
             remCalcMgr.SetDecimalPosition(AppPreference.GetDecimalPoint())
             initStateMgr()
         case .TAP_AC:
@@ -520,8 +470,56 @@ class MainViewController: UIViewController {
         
         outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString           // 小数点位置
         outletInputValuesTextField.text = remCalcMgr.P_InputValuesString        // 入力値
-        outletExpressionValueTextField.text = remCalcMgr.P_ExpressionString     // 式
-        outletAnswerValueTextField.text = remCalcMgr.P_AnswerString             // 答え
+        outletExpressionValueLabel.text = remCalcMgr.P_ExpressionString         // 式
+        outletExpressionValueLabel.FontSizeToFit()
+        outletAnswerValueLabel.text = remCalcMgr.P_AnswerString                 // 答え
+        outletAnswerValueLabel.FontSizeToFit()
+    }
+    
+    /**
+     Initialize the configuration of each view
+     */
+    private func initConfigOfEachView() {
+        
+        // 表示エリア
+        outletInputValuesTextField.isUserInteractionEnabled = false
+        outletExpressionLabel.FontSizeToFit()
+        outletAnswerLabel.FontSizeToFit()
+        outletDecimalPointTitleLabel.FontSizeToFit()
+        outletDecimalPointDownButton.FontSizeToFit()
+        outletDecimalPointValueLabel.FontSizeToFit()
+        outletDecimalPointUpButton.FontSizeToFit()
+        
+        // 入力エリア
+        outletKey0Button.FontSizeToFit()
+        outletKey00Button.FontSizeToFit()
+        outletKey1Button.FontSizeToFit()
+        outletKey2Button.FontSizeToFit()
+        outletKey3Button.FontSizeToFit()
+        outletKey4Button.FontSizeToFit()
+        outletKey5Button.FontSizeToFit()
+        outletKey6Button.FontSizeToFit()
+        outletKey7Button.FontSizeToFit()
+        outletKey8Button.FontSizeToFit()
+        outletKey9Button.FontSizeToFit()
+        outletKeyACButton.FontSizeToFit()
+        outletKeyBSButton.FontSizeToFit()
+        outletKeyDotButton.FontSizeToFit()
+        outletKeyDivideButton.FontSizeToFit()
+        outletKeyEqualButton.FontSizeToFit()
+    }
+    
+    /**
+     localize each item
+     */
+    private func localizeEachItem() {
+        
+        outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
+        outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
+        outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
+        outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
+        outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
+        
     }
     
     /**
@@ -532,8 +530,8 @@ class MainViewController: UIViewController {
         switch state {
         case .WAIT_DIVIDEND:
             outletInputValuesTextField.backgroundColor = UIColor.white
-            outletExpressionValueTextField.backgroundColor = UIColor.lightGray
-            outletAnswerValueTextField.backgroundColor = UIColor.lightGray
+            outletExpressionValueLabel.backgroundColor = UIColor.lightGray
+            outletAnswerValueLabel.backgroundColor = UIColor.lightGray
             
             outletDecimalPointDownButton.tintColor = UIColor.white
             outletDecimalPointUpButton.tintColor = UIColor.white
@@ -558,8 +556,8 @@ class MainViewController: UIViewController {
             
         case .WAIT_DIVISOR:
             outletInputValuesTextField.backgroundColor = UIColor.white
-            outletExpressionValueTextField.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
-            outletAnswerValueTextField.backgroundColor = UIColor.lightGray
+            outletExpressionValueLabel.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
+            outletAnswerValueLabel.backgroundColor = UIColor.lightGray
             
             outletDecimalPointDownButton.tintColor = UIColor.white
             outletDecimalPointUpButton.tintColor = UIColor.white
@@ -584,8 +582,8 @@ class MainViewController: UIViewController {
         
         case .VIEW_ANSWER:
             outletInputValuesTextField.backgroundColor = UIColor.lightGray
-            outletExpressionValueTextField.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
-            outletAnswerValueTextField.backgroundColor = UIColor.hexStr(hexStr: "EAC7CD", alpha: 1.0)
+            outletExpressionValueLabel.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
+            outletAnswerValueLabel.backgroundColor = UIColor.hexStr(hexStr: "EAC7CD", alpha: 1.0)
             
             outletDecimalPointDownButton.tintColor = UIColor.lightGray
             outletDecimalPointUpButton.tintColor = UIColor.lightGray

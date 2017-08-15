@@ -102,35 +102,35 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-xy-ruY" userLabel="ExpressionSpacer">
                                                         <rect key="frame" x="60" y="-0.5" width="6" height="50"/>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789012÷123456789012" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-Jb-Ibp" userLabel="ExpressionValueTextField">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="BWe-9I-Ilw" userLabel="ExpressionValueLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="66" y="5" width="234" height="40"/>
-                                                        <color key="backgroundColor" red="0.44705882352941173" green="0.5490196078431373" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.64705882349999999" green="0.81960784310000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                    </textField>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="hCI-xy-ruY" secondAttribute="bottom" id="1wn-gp-XEJ"/>
                                                     <constraint firstItem="IAs-dV-OA3" firstAttribute="leading" secondItem="Bbc-w9-M8v" secondAttribute="leading" id="5hQ-wb-Jt0"/>
-                                                    <constraint firstItem="Kaq-Jb-Ibp" firstAttribute="leading" secondItem="hCI-xy-ruY" secondAttribute="trailing" id="7oN-O7-nyg"/>
-                                                    <constraint firstItem="Kaq-Jb-Ibp" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" constant="5" id="8Xp-Nd-7Ki"/>
                                                     <constraint firstItem="Z7Q-f6-f6d" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" constant="5" id="8g4-XK-AJt"/>
                                                     <constraint firstItem="Z7Q-f6-f6d" firstAttribute="width" secondItem="IAs-dV-OA3" secondAttribute="width" multiplier="0.2" id="930-sW-W37"/>
                                                     <constraint firstItem="Z7Q-f6-f6d" firstAttribute="leading" secondItem="Bbc-w9-M8v" secondAttribute="leading" id="AL9-4k-EAz"/>
                                                     <constraint firstAttribute="bottom" secondItem="Z7Q-f6-f6d" secondAttribute="bottom" constant="5" id="EWx-Ij-MCs"/>
+                                                    <constraint firstItem="BWe-9I-Ilw" firstAttribute="leading" secondItem="hCI-xy-ruY" secondAttribute="trailing" id="ElD-k2-K1G"/>
                                                     <constraint firstItem="IAs-dV-OA3" firstAttribute="top" secondItem="Bbc-w9-M8v" secondAttribute="top" id="Ktn-vF-Adt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BWe-9I-Ilw" secondAttribute="bottom" constant="5" id="Pg9-6F-Qe0"/>
                                                     <constraint firstItem="hCI-xy-ruY" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" id="Ppv-WT-6s3"/>
                                                     <constraint firstItem="hCI-xy-ruY" firstAttribute="width" secondItem="IAs-dV-OA3" secondAttribute="width" multiplier="0.02" id="QlQ-mm-6m3"/>
-                                                    <constraint firstItem="Kaq-Jb-Ibp" firstAttribute="width" secondItem="IAs-dV-OA3" secondAttribute="width" multiplier="0.78" id="XXP-2s-dPQ"/>
+                                                    <constraint firstItem="BWe-9I-Ilw" firstAttribute="width" secondItem="IAs-dV-OA3" secondAttribute="width" multiplier="0.78" id="ZYS-xj-pbr"/>
                                                     <constraint firstItem="hCI-xy-ruY" firstAttribute="leading" secondItem="Z7Q-f6-f6d" secondAttribute="trailing" id="hpR-KG-6ZX"/>
+                                                    <constraint firstItem="BWe-9I-Ilw" firstAttribute="top" secondItem="IAs-dV-OA3" secondAttribute="bottom" constant="5" id="ojl-fG-e2N"/>
                                                     <constraint firstAttribute="trailing" secondItem="IAs-dV-OA3" secondAttribute="trailing" id="sSV-ty-vZH"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Kaq-Jb-Ibp" secondAttribute="bottom" constant="5" id="xbM-jV-RdH"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4K-Em-NYB" userLabel="AnswerValueAreaView">
@@ -158,32 +158,32 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggL-yT-6q2" userLabel="AnswerSpacer">
                                                         <rect key="frame" x="60" y="-0.5" width="6" height="57.5"/>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890...12345" borderStyle="roundedRect" textAlignment="right" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="dsQ-4b-CXg" userLabel="AnswerValueTextField">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-IC-SrX" userLabel="AnswerValueLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="66" y="0.0" width="234" height="47.5"/>
-                                                        <color key="backgroundColor" red="0.61088604007275582" green="0.53802575154654375" blue="0.54951621031662257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.93839263920000004" green="0.82463085650000001" blue="0.83799642320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                    </textField>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="dsQ-4b-CXg" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" id="5hj-fM-yhi"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2xk-IC-SrX" secondAttribute="bottom" constant="10" id="3mN-6B-UGz"/>
                                                     <constraint firstItem="ggL-yT-6q2" firstAttribute="top" secondItem="M4K-Em-NYB" secondAttribute="top" id="COu-jc-TNW"/>
                                                     <constraint firstItem="QLd-sh-qMb" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" id="Dkw-j8-Dcg"/>
-                                                    <constraint firstItem="dsQ-4b-CXg" firstAttribute="leading" secondItem="ggL-yT-6q2" secondAttribute="trailing" id="JjZ-DQ-ay7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="dsQ-4b-CXg" secondAttribute="bottom" constant="10" id="KIj-f7-mz7"/>
+                                                    <constraint firstItem="2xk-IC-SrX" firstAttribute="top" secondItem="kbS-bs-IYD" secondAttribute="bottom" id="JSI-9t-ANf"/>
                                                     <constraint firstAttribute="bottom" secondItem="QLd-sh-qMb" secondAttribute="bottom" constant="10" id="UT9-pj-M9B"/>
                                                     <constraint firstItem="ggL-yT-6q2" firstAttribute="leading" secondItem="QLd-sh-qMb" secondAttribute="trailing" id="UXu-W1-UkG"/>
+                                                    <constraint firstItem="2xk-IC-SrX" firstAttribute="leading" secondItem="ggL-yT-6q2" secondAttribute="trailing" id="UbH-JZ-RCE"/>
                                                     <constraint firstItem="QLd-sh-qMb" firstAttribute="leading" secondItem="M4K-Em-NYB" secondAttribute="leading" id="VoV-m2-VVi"/>
                                                     <constraint firstItem="QLd-sh-qMb" firstAttribute="width" secondItem="kbS-bs-IYD" secondAttribute="width" multiplier="0.2" id="W3h-FQ-bOZ"/>
-                                                    <constraint firstItem="dsQ-4b-CXg" firstAttribute="width" secondItem="kbS-bs-IYD" secondAttribute="width" multiplier="0.78" id="c07-1b-y0c"/>
                                                     <constraint firstAttribute="trailing" secondItem="kbS-bs-IYD" secondAttribute="trailing" id="e2g-og-eoP"/>
                                                     <constraint firstAttribute="bottom" secondItem="ggL-yT-6q2" secondAttribute="bottom" id="gd5-JE-Krw"/>
+                                                    <constraint firstItem="2xk-IC-SrX" firstAttribute="width" secondItem="kbS-bs-IYD" secondAttribute="width" multiplier="0.78" id="jip-Nh-TKf"/>
                                                     <constraint firstItem="ggL-yT-6q2" firstAttribute="width" secondItem="kbS-bs-IYD" secondAttribute="width" multiplier="0.02" id="k7M-HY-AUL"/>
                                                     <constraint firstItem="kbS-bs-IYD" firstAttribute="leading" secondItem="M4K-Em-NYB" secondAttribute="leading" id="m3B-cK-QC7"/>
                                                     <constraint firstItem="kbS-bs-IYD" firstAttribute="top" secondItem="M4K-Em-NYB" secondAttribute="top" id="v6G-Nu-Nlc"/>
@@ -701,13 +701,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="outletAnswerLabel" destination="QLd-sh-qMb" id="Qaj-8L-TI2"/>
-                        <outlet property="outletAnswerValueTextField" destination="dsQ-4b-CXg" id="ELD-d9-DsA"/>
+                        <outlet property="outletAnswerValueLabel" destination="2xk-IC-SrX" id="cHJ-lD-nNR"/>
                         <outlet property="outletDecimalPointDownButton" destination="w91-4N-ZQo" id="71a-GP-Wol"/>
                         <outlet property="outletDecimalPointTitleLabel" destination="C7b-FR-hhU" id="Bsb-pM-zAm"/>
                         <outlet property="outletDecimalPointUpButton" destination="noE-1t-jeh" id="WuU-ha-Pnj"/>
                         <outlet property="outletDecimalPointValueLabel" destination="hWf-oN-8P1" id="BEi-Ge-R5f"/>
                         <outlet property="outletExpressionLabel" destination="Z7Q-f6-f6d" id="i1L-Z8-DzZ"/>
-                        <outlet property="outletExpressionValueTextField" destination="Kaq-Jb-Ibp" id="PGr-se-KHw"/>
+                        <outlet property="outletExpressionValueLabel" destination="BWe-9I-Ilw" id="Edh-LH-GRY"/>
                         <outlet property="outletHistoryButton" destination="NAj-Eg-CwO" id="Fk1-uX-1zm"/>
                         <outlet property="outletInputValuesTextField" destination="Sg7-Ni-fTC" id="4wA-mt-pB0"/>
                         <outlet property="outletKey00Button" destination="tqT-XA-Dx9" id="y0P-qU-4t0"/>
@@ -733,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266.4000000000001" y="-586.95652173913049"/>
+            <point key="canvasLocation" x="2265" y="-587.32394366197184"/>
         </scene>
         <!--History Table View Controller-->
         <scene sceneID="0IZ-py-aX7">
