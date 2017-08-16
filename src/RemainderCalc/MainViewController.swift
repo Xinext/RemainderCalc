@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var outletHistoryButton: UIBarButtonItem!    // 履歴ボタン
     
     // 表示エリア
-    @IBOutlet weak var outletInputValuesTextField: UITextField!         // 入力値テキスト
+    @IBOutlet weak var outletInputValueLabel: XIPaddingLabel!           // 入力値テキストラベル
     @IBOutlet weak var outletExpressionLabel: XIPaddingLabel!           // 式タイトルラベル
     @IBOutlet weak var outletExpressionValueLabel: XIPaddingLabel!      // 式テキストラベル
     @IBOutlet weak var outletAnswerLabel: XIPaddingLabel!               // 答えタイトルラベル
@@ -47,6 +47,7 @@ class MainViewController: UIViewController {
 
     // MARK: - Private variable
     private var adMgr = AdModMgr()
+    private var firstAppear: Bool = false
     
     // MARK: - ViewController Override
     override func viewDidLoad() {
@@ -55,17 +56,41 @@ class MainViewController: UIViewController {
         
         // 広告マネージャーの初期化
         adMgr.InitManager(pvc:self, cv:outletMainContentsView, lc: outletMainContentsBottomLayoutConstraint)
-
-        // ステートマネージャーの初期化
-        procStateMgr(.INIT)
     }
 
+    /**
+     Viewが表示される直前に呼び出されるイベントハンドラー
+     */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 最初に表示される時の処理
+        if (firstAppear != true) {
+            outletMainContentsView.isHidden = true  // メインコンテンツの準備ができるまで非表示
+        }
+    }
+    
+    /**
+     Viewが表示された直後に呼び出されるイベントハンドラー
+     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        adMgr.DispAdView(pos: AdModMgr.DISP_POSITION.BOTTOM)
+        // 最初に表示される時の処理
+        if (firstAppear != true) {
+            
+            procStateMgr(.INIT) // メインコンテンツを初期化
+            outletMainContentsView.isHidden = false // メインコンテンツの準備が完了したので表示
+        
+            adMgr.DispAdView(pos: AdModMgr.DISP_POSITION.BOTTOM)    // 広告の表示
+            
+            firstAppear = true
+        }
     }
     
+    /**
+     メモリー警告
+     */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -469,7 +494,7 @@ class MainViewController: UIViewController {
     private func updateTextInDisplayArea() {
         
         outletDecimalPointValueLabel.text = remCalcMgr.P_DecPosString           // 小数点位置
-        outletInputValuesTextField.text = remCalcMgr.P_InputValuesString        // 入力値
+        outletInputValueLabel.text = remCalcMgr.P_InputValuesString             // 入力値
         outletExpressionValueLabel.text = remCalcMgr.P_ExpressionString         // 式
         outletExpressionValueLabel.FontSizeToFit()
         outletAnswerValueLabel.text = remCalcMgr.P_AnswerString                 // 答え
@@ -482,7 +507,9 @@ class MainViewController: UIViewController {
     private func initConfigOfEachView() {
         
         // 表示エリア
-        outletInputValuesTextField.isUserInteractionEnabled = false
+        outletInputValueLabel.text = "123456789012"
+        outletInputValueLabel.FontSizeToFit()
+        outletInputValueLabel.text = ""
         outletExpressionLabel.FontSizeToFit()
         outletAnswerLabel.FontSizeToFit()
         outletDecimalPointTitleLabel.FontSizeToFit()
@@ -529,7 +556,7 @@ class MainViewController: UIViewController {
         
         switch state {
         case .WAIT_DIVIDEND:
-            outletInputValuesTextField.backgroundColor = UIColor.white
+            outletInputValueLabel.backgroundColor = UIColor.white
             outletExpressionValueLabel.backgroundColor = UIColor.lightGray
             outletAnswerValueLabel.backgroundColor = UIColor.lightGray
             
@@ -555,7 +582,7 @@ class MainViewController: UIViewController {
             outletKeyEqualButton.tintColor = UIColor.lightGray
             
         case .WAIT_DIVISOR:
-            outletInputValuesTextField.backgroundColor = UIColor.white
+            outletInputValueLabel.backgroundColor = UIColor.white
             outletExpressionValueLabel.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
             outletAnswerValueLabel.backgroundColor = UIColor.lightGray
             
@@ -581,7 +608,7 @@ class MainViewController: UIViewController {
             outletKeyEqualButton.tintColor = UIColor.white
         
         case .VIEW_ANSWER:
-            outletInputValuesTextField.backgroundColor = UIColor.lightGray
+            outletInputValueLabel.backgroundColor = UIColor.lightGray
             outletExpressionValueLabel.backgroundColor = UIColor.hexStr(hexStr: "A5D1F4", alpha: 1.0)
             outletAnswerValueLabel.backgroundColor = UIColor.hexStr(hexStr: "EAC7CD", alpha: 1.0)
             
