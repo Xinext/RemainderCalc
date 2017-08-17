@@ -51,7 +51,7 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         
         let gadRequest:GADRequest = GADRequest()
         
-#if true // Test mode
+#if false // Test mode
     gadRequest.testDevices = [ADMOD_TESTID]
     notifyDebugMode(pvc: pvc)
 #endif
