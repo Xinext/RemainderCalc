@@ -6,6 +6,8 @@
 // MARK: - Common strings
 "STR_ALERT" = "Alert";
 "STR_INFO" = "Information";
+"STR_QUESTION" = "Question";
+"STR_CONFIRMATION" = "Confirmation";
 
 "STR_OK" = "OK";
 "STR_CANCEL" = "Cancel";
@@ -20,8 +22,11 @@
 "STR_MAIN_HISTORY_BUTTON" = "Hist.";
 "STR_MAIN_EXP_LABEL" = "Exp.";
 "STR_MAIN_ANS_LABEL" = "Ans.";
-"STR_MAIN_DECPOS_LABEL" = "Decimals number";
+"STR_MAIN_DECPOS_LABEL" = "Dec number";
 "STR_MAIN_ANSWER_ERROR_TEXT" = "Error";
 
 // MARK: - Main View
-"STR_HISTORY_VIEW_TITLE" = "Computation history";
+"STR_HISTORY_VIEW_TITLE" = "History";
+"STR_HISTORY_BACK_BUTTON" = "< Back";
+"STR_HISTORY_CLEAR_BUTTON" = "Clear";
+"STR_HISTORY_CLEAR_CHECK_TEXT" = "Are you sure you want to delete the history?";

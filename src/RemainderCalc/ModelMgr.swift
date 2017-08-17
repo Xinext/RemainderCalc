@@ -126,4 +126,39 @@ class ModelMgr {
         return result
     }
     
+    /**
+     指定された件数より後を削除（保存時間の降順）
+     - parameter top: 残す件数 (0は全削除)
+     */
+    static func DeleteDataWithOffset(offset: Int) {
+        
+        // コンテキストの取得
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        
+        // クエリーの生成
+        let request: NSFetchRequest<D_History> = D_History.fetchRequest()
+        let sortDescripter = NSSortDescriptor(key: self.CNS_M_K_UPDATE_TIME, ascending: false)  // 日付の降順で取り出す
+        request.sortDescriptors = [sortDescripter]
+        request.fetchOffset = offset
+        
+        request.sortDescriptors = [sortDescripter]
+        
+        // データの取得
+        let fetchData = try! context.fetch(request) as Array<D_History>
+        if(!fetchData.isEmpty){
+            for i in 0..<fetchData.count{
+                let deleteObject = fetchData[i] as D_History
+                context.delete(deleteObject)
+            }
+            do{
+                try context.save()
+            }catch{
+                print(error)
+            }
+        }
+
+    }
+    
 }

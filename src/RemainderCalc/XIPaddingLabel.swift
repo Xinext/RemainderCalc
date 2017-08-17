@@ -80,7 +80,7 @@ class XIPaddingLabel: UILabel {
      */
     public func FontSizeToFit() {
         
-        self.fontSizeToFit(minimumFontScale: 0.2, diminishRate: 0.5)
+        self.fontSizeToFit(minimumFontScale: 0.1, diminishRate: 0.5)
     }
     
     /**

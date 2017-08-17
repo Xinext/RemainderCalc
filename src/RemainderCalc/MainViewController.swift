@@ -654,5 +654,7 @@ class MainViewController: UIViewController {
             
             data.m_k_update_time = NSDate()
         })
+        
+        ModelMgr.DeleteDataWithOffset(offset: 50)
     }
 }

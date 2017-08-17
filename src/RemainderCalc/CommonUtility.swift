@@ -94,6 +94,27 @@ class XIDialog {
     }
     
     /**
+     Displays a Confirmation dialog.
+     - parameter pvc: ViewController Parent ViewController.
+     - parameter msg: Display message.
+     */
+    static func DispConfirmationMsg( pvc:UIViewController, msg: String, handler proc: (() -> Swift.Void)? = nil ) {
+        
+        let titleText = NSLocalizedString("STR_CONFIRMATION", comment: "Confirmation")
+        let alertController: UIAlertController = UIAlertController(title: titleText, message: msg, preferredStyle: .alert)
+        
+        let actionYes = UIAlertAction(title: NSLocalizedString("STR_YES", comment: "Yes"),
+                                      style: .destructive,
+                                      handler:{(action:UIAlertAction!) in proc!()})
+        alertController.addAction(actionYes)
+        
+        let actionNo = UIAlertAction(title: NSLocalizedString("STR_NO", comment: "No"), style: .cancel)
+        alertController.addAction(actionNo)
+        
+        pvc.present(alertController, animated: true, completion: nil)
+    }
+    
+    /**
      Displays a selection dialog for navigating to the application setting page.
      - parameter pvc: ViewController Parent ViewController.
      - parameter msg: Display message.
