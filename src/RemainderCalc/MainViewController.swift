@@ -54,6 +54,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // ローカライズ
+        localizeEachItem()
+        
         // 広告マネージャーの初期化
         adMgr.InitManager(pvc:self, cv:outletMainContentsView, lc: outletMainContentsBottomLayoutConstraint)
     }
@@ -96,6 +99,19 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /**
+     localize each item
+     */
+    private func localizeEachItem() {
+        
+        outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
+        outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
+        outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
+        outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
+        outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
+        
+    }
+    
     // MARK: - Action method
     /**
      [Action] 小数点位置ダウンボタン 押下
@@ -534,19 +550,6 @@ class MainViewController: UIViewController {
         outletKeyDotButton.FontSizeToFit()
         outletKeyDivideButton.FontSizeToFit()
         outletKeyEqualButton.FontSizeToFit()
-    }
-    
-    /**
-     localize each item
-     */
-    private func localizeEachItem() {
-        
-        outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
-        outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
-        outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
-        outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
-        outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
-        
     }
     
     /**
