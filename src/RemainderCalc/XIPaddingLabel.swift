@@ -109,9 +109,9 @@ class XIPaddingLabel: UILabel {
         var area = CGSize.zero
         var font = UIFont()
         var fs = fontSize
-        var newAttributes = [String : Any]()
+        var newAttributes = [NSAttributedStringKey : Any]()
         self.attributedText?.enumerateAttributes(in: NSMakeRange(0, text!.characters.count), options: .longestEffectiveRangeNotRequired, using: {
-            (attributes: [String : Any], range: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+            (attributes: [NSAttributedStringKey : Any], range: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
             newAttributes = attributes
         })
         if newAttributes.count == 0 {
@@ -119,7 +119,7 @@ class XIPaddingLabel: UILabel {
         }
         while (true) {
             font = UIFont(name: fontName, size: fs)!
-            newAttributes[NSFontAttributeName] = font
+            newAttributes[NSAttributedStringKey.font] = font
             
             if isOneLine {
                 boundingSize = CGSize(width: CGFloat(MAXFLOAT), height: size.height)

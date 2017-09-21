@@ -295,8 +295,9 @@ class RemainderCalculationManager {
         if (inputString.characters.count > 0) {
             
             // １文字削る
-            outString = inputString.substring(to: inputString.index(before: inputString.endIndex))
-            
+            let offset = inputString.characters.count - 1
+            outString = String(inputString[..<inputString.index(inputString.startIndex, offsetBy: offset)])
+
             // 削った結果が0の場合は、空白とする
             let tmpValue = NSDecimalNumber(string: outString)
             if (tmpValue.decimalValue.isNaN != true) {

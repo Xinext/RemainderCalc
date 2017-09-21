@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // ナビゲーションバーの共通定義
         UINavigationBar.appearance().barTintColor = UIColor.hexStr(hexStr: "56a764", alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.hexStr(hexStr: "ffffff", alpha: 1.0)]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.hexStr(hexStr: "ffffff", alpha: 1.0)]
         UINavigationBar.appearance().tintColor = UIColor.hexStr(hexStr: "0074bf", alpha: 1.0)
         
         return true
