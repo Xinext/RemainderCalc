@@ -21,6 +21,7 @@
 		417471AE1EA71CAD00A0BDF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */; };
 		4175CD791EC45B09006E01EA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4175CD781EC45B09006E01EA /* HistoryTableViewController.swift */; };
 		4187130D1EC1865400691173 /* ModelMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187130C1EC1865400691173 /* ModelMgr.swift */; };
+		418D785E1F73D42100957B14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418D785D1F73D41700957B14 /* GoogleService-Info.plist */; };
 		41A51B7F1E9DF2F6009A3A41 /* XIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */; };
 		41D2CF281E962964000468AE /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D2CF271E962964000468AE /* CommonUtility.swift */; };
 		B4D5EF321803ACE6F645BDBB /* Pods_RemainderCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */; };
@@ -46,6 +47,7 @@
 		417471B41EA71EE900A0BDF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4175CD781EC45B09006E01EA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		4187130C1EC1865400691173 /* ModelMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMgr.swift; sourceTree = "<group>"; };
+		418D785D1F73D41700957B14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingLabel.swift; sourceTree = "<group>"; };
 		41D2CF271E962964000468AE /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemainderCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				413CA2161EA5F34F00D98587 /* Localizable.strings */,
 				417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */,
 				4104F9891E8DFC4400518089 /* Assets.xcassets */,
+				418D785D1F73D41700957B14 /* GoogleService-Info.plist */,
 			);
 			path = RemainderCalc;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				413CA2141EA5F34F00D98587 /* Localizable.strings in Resources */,
 				4104F98A1E8DFC4400518089 /* Assets.xcassets in Resources */,
+				418D785E1F73D42100957B14 /* GoogleService-Info.plist in Resources */,
 				4104F9881E8DFC4400518089 /* Main.storyboard in Resources */,
 				417471AE1EA71CAD00A0BDF6 /* InfoPlist.strings in Resources */,
 			);
@@ -205,13 +209,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemainderCalc-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		989B0510E14FFBC5E03BC453 /* [CP] Copy Pods Resources */ = {
@@ -235,9 +242,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

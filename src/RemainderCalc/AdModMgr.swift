@@ -39,6 +39,8 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
      */
     func InitManager(pvc: UIViewController, cv: UIView, lc: NSLayoutConstraint) {
         
+        GADMobileAds.configure(withApplicationID: ADMOD_APPID)
+        
         pvc.addChildViewController(self)
         
         _contentsView = cv

@@ -6,6 +6,8 @@ target 'RemainderCalc' do
   use_frameworks!
 
   # Pods for RemainderCalc
-  pod 'Google-Mobile-Ads-SDK'
+  # pod 'Google-Mobile-Ads-SDK'
+    pod 'Firebase/Core'
+    pod 'Firebase/AdMob'
 
 end

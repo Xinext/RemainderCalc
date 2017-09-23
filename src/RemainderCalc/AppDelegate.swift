@@ -5,6 +5,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Firebaseの設定
+        FirebaseApp.configure()
         
         // ナビゲーションバーの共通定義
         UINavigationBar.appearance().barTintColor = UIColor.hexStr(hexStr: "56a764", alpha: 1.0)

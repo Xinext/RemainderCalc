@@ -655,7 +655,7 @@ class MainViewController: UIViewController {
             data.m_i_divisor = remCalcMgr.P_DivisorValue
             data.m_i_dividend = remCalcMgr.P_DividendValue
             
-            data.m_k_update_time = NSDate()
+            data.m_k_update_time = NSDate() as Date
         })
         
         ModelMgr.DeleteDataWithOffset(offset: 50)
