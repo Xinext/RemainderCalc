@@ -18,5 +18,5 @@ extension D_History {
     @NSManaged public var m_i_dividend: NSDecimalNumber?
     @NSManaged public var m_i_divisor: NSDecimalNumber?
     @NSManaged public var m_i_expression: String?
-    @NSManaged public var m_k_update_time: NSDate?
+    @NSManaged public var m_k_update_time: Date
 }
