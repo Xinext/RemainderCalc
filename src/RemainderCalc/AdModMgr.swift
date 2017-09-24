@@ -31,11 +31,10 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
     
     // MARK: - Public method
     /**
-     Initialization of processing
-     - parameter pvc: ViewController Parent ViewController.
-     - parameter cv: UIView The view of contents related to AD.
-     - parameter lc: UIView The layout constraint of contents view.
-     - returns: nothing
+     ADマネージャーの初期化
+     - parameter pvc: ADをつけるUIViewの親UIViewController
+     - parameter cv: ADをつけるUIView(コンテナビュー)
+     - parameter lc: 表示位置により上下どちらかのLayoutConstraintを渡す。
      */
     func InitManager(pvc: UIViewController, cv: UIView, lc: NSLayoutConstraint) {
         
@@ -77,12 +76,13 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
         let banner_y: CGFloat
         switch pos {
         case DISP_POSITION.TOP:
+            // バナーの縦位置 = メインコンテンツの縦位置
             banner_y = _contentsView!.frame.origin.y
         default:    // bottom
+            // バナーの縦位置 = (メインコンテンツの高さ - バナーの高さ) + メインコンテンツの縦位置
             banner_y = (_contentsView.frame.height - adBannerView.frame.size.height) + _contentsView.frame.origin.y
         }
         rectBanner = CGRect(x: banner_x, y: banner_y, width: banner_width, height: banner_height)
-        
         adBannerView.frame = rectBanner
         
         if ( adBannerView.isHidden == true ) {
