@@ -80,6 +80,7 @@ class XIPaddingLabel: UILabel {
      */
     public func FontSizeToFit() {
         
+        self.lineBreakMode = .byClipping
         self.fontSizeToFit(minimumFontScale: 0.1, diminishRate: 0.5)
     }
     

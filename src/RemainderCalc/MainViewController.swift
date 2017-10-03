@@ -523,7 +523,7 @@ class MainViewController: UIViewController {
     private func initConfigOfEachView() {
         
         // 表示エリア
-        outletInputValueLabel.text = "123456789012"
+        outletInputValueLabel.text = "888888888888" // 12桁
         outletInputValueLabel.FontSizeToFit()
         outletInputValueLabel.text = ""
         outletExpressionLabel.FontSizeToFit()

@@ -107,7 +107,7 @@ SW5wdXRWYWx1ZUFyZWEQEBAQEFZpZXc
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="BWe-9I-Ilw" userLabel="ExpressionValueLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="109.33333333333334" y="5" width="255.66666666666666" height="58.333333333333314"/>
                                                         <color key="backgroundColor" red="0.64705882349999999" green="0.81960784310000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
@@ -159,7 +159,7 @@ SW5wdXRWYWx1ZUFyZWEQEBAQEFZpZXc
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-IC-SrX" userLabel="AnswerValueLabel" customClass="XIPaddingLabel" customModule="RemainderCalc" customModuleProvider="target">
                                                         <rect key="frame" x="109.33333333333334" y="0.0" width="255.66666666666666" height="58.333333333333343"/>
                                                         <color key="backgroundColor" red="0.93839263920000004" green="0.82463085650000001" blue="0.83799642320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
