@@ -13,6 +13,7 @@
 		4105E3E41EADC344005F2851 /* RemainderCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105E3E31EADC344005F2851 /* RemainderCalc.swift */; };
 		41337E511F41664B009DBB35 /* AppPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41337E501F41664B009DBB35 /* AppPreference.swift */; };
 		41395C101E9CD92E00A2095D /* XIPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */; };
+		4139AEB71F94635400CD1DC3 /* PreferenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139AEB61F94635400CD1DC3 /* PreferenceTableViewController.swift */; };
 		413CA2141EA5F34F00D98587 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413CA2161EA5F34F00D98587 /* Localizable.strings */; };
 		414CF68A1EB8AB7100148A5D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 414CF6881EB8AB7100148A5D /* Model.xcdatamodeld */; };
 		4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4167D2D11E94C0A9008B24BF /* MainViewController.swift */; };
@@ -24,6 +25,9 @@
 		418D785E1F73D42100957B14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418D785D1F73D41700957B14 /* GoogleService-Info.plist */; };
 		41A51B7F1E9DF2F6009A3A41 /* XIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */; };
 		41D2CF281E962964000468AE /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D2CF271E962964000468AE /* CommonUtility.swift */; };
+		41DDB7EB1F95A11200BE0FF5 /* SE_TapButton.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 41DDB7EA1F95A10D00BE0FF5 /* SE_TapButton.mp3 */; };
+		41DDB7ED1F95A19500BE0FF5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DDB7EC1F95A19500BE0FF5 /* AVFoundation.framework */; };
+		41F669041F91F421002482BA /* icon_preference.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BF149C1F8C86510022B51A /* icon_preference.png */; };
 		B4D5EF321803ACE6F645BDBB /* Pods_RemainderCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,7 @@
 		4105E3E31EADC344005F2851 /* RemainderCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderCalc.swift; sourceTree = "<group>"; };
 		41337E501F41664B009DBB35 /* AppPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPreference.swift; sourceTree = "<group>"; };
 		41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingButton.swift; sourceTree = "<group>"; };
+		4139AEB61F94635400CD1DC3 /* PreferenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTableViewController.swift; sourceTree = "<group>"; };
 		413CA2171EA5F35200D98587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		414CF6891EB8AB7100148A5D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4167D2D11E94C0A9008B24BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +54,10 @@
 		4187130C1EC1865400691173 /* ModelMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMgr.swift; sourceTree = "<group>"; };
 		418D785D1F73D41700957B14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingLabel.swift; sourceTree = "<group>"; };
+		41BF149C1F8C86510022B51A /* icon_preference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_preference.png; sourceTree = "<group>"; };
 		41D2CF271E962964000468AE /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
+		41DDB7EA1F95A10D00BE0FF5 /* SE_TapButton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_TapButton.mp3; sourceTree = "<group>"; };
+		41DDB7EC1F95A19500BE0FF5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemainderCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71268394E619387BBC32184 /* Pods-RemainderCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemainderCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1C766011113F6AA66E3148 /* Pods-RemainderCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemainderCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemainderCalc/Pods-RemainderCalc.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DDB7ED1F95A19500BE0FF5 /* AVFoundation.framework in Frameworks */,
 				B4D5EF321803ACE6F645BDBB /* Pods_RemainderCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +79,7 @@
 		11549DE6557D17CA8A56C89E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41DDB7EC1F95A19500BE0FF5 /* AVFoundation.framework */,
 				692E19AA60325F8A1E7C2ED9 /* Pods_RemainderCalc.framework */,
 			);
 			name = Frameworks;
@@ -102,6 +112,7 @@
 				41337E501F41664B009DBB35 /* AppPreference.swift */,
 				4167D2D11E94C0A9008B24BF /* MainViewController.swift */,
 				4175CD781EC45B09006E01EA /* HistoryTableViewController.swift */,
+				4139AEB61F94635400CD1DC3 /* PreferenceTableViewController.swift */,
 				41D2CF271E962964000468AE /* CommonUtility.swift */,
 				41395C0F1E9CD92E00A2095D /* XIPaddingButton.swift */,
 				41A51B7E1E9DF2F6009A3A41 /* XIPaddingLabel.swift */,
@@ -114,6 +125,8 @@
 				417471B01EA71CAD00A0BDF6 /* InfoPlist.strings */,
 				4104F9891E8DFC4400518089 /* Assets.xcassets */,
 				418D785D1F73D41700957B14 /* GoogleService-Info.plist */,
+				41BF149C1F8C86510022B51A /* icon_preference.png */,
+				41DDB7EA1F95A10D00BE0FF5 /* SE_TapButton.mp3 */,
 			);
 			path = RemainderCalc;
 			sourceTree = "<group>";
@@ -192,11 +205,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DDB7EB1F95A11200BE0FF5 /* SE_TapButton.mp3 in Resources */,
 				413CA2141EA5F34F00D98587 /* Localizable.strings in Resources */,
 				4104F98A1E8DFC4400518089 /* Assets.xcassets in Resources */,
 				418D785E1F73D42100957B14 /* GoogleService-Info.plist in Resources */,
 				4104F9881E8DFC4400518089 /* Main.storyboard in Resources */,
 				417471AE1EA71CAD00A0BDF6 /* InfoPlist.strings in Resources */,
+				41F669041F91F421002482BA /* icon_preference.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +282,7 @@
 				4167D2D61E94D5AB008B24BF /* AdModMgr.swift in Sources */,
 				41337E511F41664B009DBB35 /* AppPreference.swift in Sources */,
 				4167D2D21E94C0A9008B24BF /* MainViewController.swift in Sources */,
+				4139AEB71F94635400CD1DC3 /* PreferenceTableViewController.swift in Sources */,
 				4167D2D51E94D5AB008B24BF /* AdModDef.swift in Sources */,
 				41D2CF281E962964000468AE /* CommonUtility.swift in Sources */,
 				41395C101E9CD92E00A2095D /* XIPaddingButton.swift in Sources */,

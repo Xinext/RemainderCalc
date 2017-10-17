@@ -5,6 +5,7 @@
 
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class MainViewController: UIViewController {
     // タイトルエリア
     @IBOutlet weak var outletNavigationItem: UINavigationItem!  // アプリタイトル
     @IBOutlet weak var outletHistoryButton: UIBarButtonItem!    // 履歴ボタン
+    @IBOutlet weak var outletPreferenceButton: UIBarButtonItem! // 設定ボタン
     
     // 表示エリア
     @IBOutlet weak var outletInputValueLabel: XIPaddingLabel!           // 入力値テキストラベル
@@ -49,13 +51,21 @@ class MainViewController: UIViewController {
     private var adMgr = AdModMgr()
     private var firstAppear: Bool = false
     
+    var seTapButtonAudio : AVAudioPlayer! = nil
+    
     // MARK: - ViewController Override
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // ローカライズ
+        // 表示アイテムの初期化
+        initEachItem()
+        
+        // 表示アイテムのローカライズ
         localizeEachItem()
+        
+        // SE(効果音)の初期ぁ
+        initSEAudio()
         
         // 広告マネージャーの初期化
         adMgr.InitManager(pvc:self, cv:outletMainContentsView, lc: outletMainContentsBottomLayoutConstraint)
@@ -100,16 +110,47 @@ class MainViewController: UIViewController {
     }
 
     /**
+     initialize each item
+     */
+    private func initEachItem() {
+        
+        // Navibar right button
+        outletPreferenceButton.width = 0
+        let settingIcon = UIImage(named: "icon_preference")?.ResizeUIImage(width: 20, height: 20)
+        outletPreferenceButton.image = settingIcon
+    }
+    
+    /**
      localize each item
      */
     private func localizeEachItem() {
         
         outletNavigationItem.title = NSLocalizedString("STR_MAIN_VIEW_TITLE", comment: "")
         outletHistoryButton.title = NSLocalizedString("STR_MAIN_HISTORY_BUTTON", comment: "")
+        outletPreferenceButton.title = ""
         outletExpressionLabel.text = NSLocalizedString("STR_MAIN_EXP_LABEL", comment: "")
         outletAnswerLabel.text = NSLocalizedString("STR_MAIN_ANS_LABEL", comment: "")
         outletDecimalPointTitleLabel.text = NSLocalizedString("STR_MAIN_DECPOS_LABEL", comment: "")
         
+    }
+    
+    /**
+     initialize each se audio
+     */
+    private func initSEAudio() {
+        
+        // for Tap the button
+        let soundFilePath = Bundle.main.path(forResource: "SE_TapButton", ofType: "mp3")!
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成
+        do {
+            seTapButtonAudio = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            seTapButtonAudio = nil
+            print("AVAudioPlayerインスタンス作成失敗")
+        }
+        // バッファに保持していつでも再生できるようにする
+        seTapButtonAudio.prepareToPlay()
     }
     
     // MARK: - Action method
@@ -292,6 +333,7 @@ class MainViewController: UIViewController {
             remCalcMgr.SetDecimalPosition(AppPreference.GetDecimalPoint())
             initStateMgr()
         case .TAP_AC:
+            playTapButtonSound()
             initStateMgr()
         default:
             // no action
@@ -345,6 +387,7 @@ class MainViewController: UIViewController {
             evt_TAP_BS()
             break
         case .TAP_DIV:
+            playTapButtonSound()
             remCalcMgr.DecideDividend()
             updateTextInDisplayArea()
             procState = .WAIT_DIVISOR
@@ -390,6 +433,7 @@ class MainViewController: UIViewController {
             // ignore
             break
         case .TAP_EQ:
+            playTapButtonSound()
             remCalcMgr.DecideDiviSor()
             saveDataForHistory()
             procState = .VIEW_ANSWER
@@ -448,6 +492,7 @@ class MainViewController: UIViewController {
      TAP_DECPOS_UP
      */
     func evt_TAP_DECPOS_UP() {
+        playTapButtonSound()
         remCalcMgr.UpDecimalPosition()
         AppPreference.SetDecimalPoint(value: remCalcMgr.P_DecimalPosition)
         updateTextInDisplayArea()
@@ -457,6 +502,7 @@ class MainViewController: UIViewController {
      TAP_DECPOS_DOWN
      */
     func evt_TAP_DECPOS_DOWN() {
+        playTapButtonSound()
         remCalcMgr.DownDecimalPosition()
         AppPreference.SetDecimalPoint(value: remCalcMgr.P_DecimalPosition)
         updateTextInDisplayArea()
@@ -466,6 +512,7 @@ class MainViewController: UIViewController {
      TAP_NUM
      */
     func evt_TAP_NUM(_ number: Int) {
+        playTapButtonSound()
         remCalcMgr.InputNumber(number)
         updateTextInDisplayArea()
     }
@@ -474,6 +521,7 @@ class MainViewController: UIViewController {
      TAP_BS
      */
     func evt_TAP_BS() {
+        playTapButtonSound()
         remCalcMgr.ExecuteBackSpace()
         updateTextInDisplayArea()
     }
@@ -482,6 +530,7 @@ class MainViewController: UIViewController {
      TAP_DP
      */
     func evt_TAP_DP() {
+        playTapButtonSound()
         remCalcMgr.InputDecimalPoint()
         updateTextInDisplayArea()
     }
@@ -659,5 +708,17 @@ class MainViewController: UIViewController {
         })
         
         ModelMgr.DeleteDataWithOffset(offset: 50)
+    }
+    
+    /**
+     Play tap the button.
+     */
+    private func playTapButtonSound() {
+        
+        if ( AppPreference.GetButtonPushedSound() == true ) {
+            if ( self.seTapButtonAudio != nil ) {
+                self.seTapButtonAudio.play()
+            }
+        }
     }
 }

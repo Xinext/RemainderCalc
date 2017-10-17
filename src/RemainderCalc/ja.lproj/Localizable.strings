@@ -25,8 +25,12 @@
 "STR_MAIN_DECPOS_LABEL" = "小数点の位置";
 "STR_MAIN_ANSWER_ERROR_TEXT" = "エラー";
 
-// MARK: - Main View
+// MARK: - History View
 "STR_HISTORY_VIEW_TITLE" = "履歴";
 "STR_HISTORY_BACK_BUTTON" = "< 戻る";
 "STR_HISTORY_CLEAR_BUTTON" = "削除";
 "STR_HISTORY_CLEAR_CHECK_TEXT" = "履歴を削除してもよろしいですか？";
+
+// MARK: - Preference View
+"STR_PREF_SUBTITLE_SOUND" = "音の設定";
+"STR_PREF_TAP_BUTTON_LABEL" = "ボタンをタップする音";
