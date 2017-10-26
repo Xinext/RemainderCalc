@@ -17,6 +17,8 @@
 // MARK: - Application
 "STR_APP_TITLE" = "あまり割算電卓";
 
+"STR_APP_MARK_REMAINDER" = "あまり";
+
 // MARK: - Main View
 "STR_MAIN_VIEW_TITLE" = "あまり割算電卓";
 "STR_MAIN_HISTORY_BUTTON" = "履歴";

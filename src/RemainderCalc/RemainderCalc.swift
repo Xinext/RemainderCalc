@@ -414,7 +414,7 @@ class RemainderCalculationManager {
             // 答えテキストを生成
             resString = decAnswer.stringValue
             if (decRemainder.decimalValue > 0) {
-                resString += "..."
+                resString += NSLocalizedString("STR_APP_MARK_REMAINDER", comment: "R")
                 resString += decRemainder.stringValue
             }
             

@@ -17,6 +17,8 @@
 // MARK: - Application
 "STR_APP_TITLE" = "RemainderCalc";
 
+"STR_APP_MARK_REMAINDER" = "R";
+
 // MARK: - Main View
 "STR_MAIN_VIEW_TITLE" = "Remainder calculator";
 "STR_MAIN_HISTORY_BUTTON" = "Hist.";
