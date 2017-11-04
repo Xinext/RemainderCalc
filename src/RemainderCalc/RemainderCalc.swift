@@ -212,8 +212,8 @@ class RemainderCalculationManager {
         switch self._calcState {
         case .WAIT_DIVIDEND:
             
-            if (!(value == 0 && self._dividend.characters.count <= 0) &&            // 先頭値チェック
-                (self._dividend.characters.count < MAX_INPUT_DIGITNUMBER)) {    // リミットチェック
+            if (!(value == 0 && self._dividend.count <= 0) &&        // 先頭値チェック
+                (self._dividend.count < MAX_INPUT_DIGITNUMBER)) {    // リミットチェック
                 self._dividend.append(String(value))
             }
             else {
@@ -222,8 +222,8 @@ class RemainderCalculationManager {
             
         case .WAIT_DIVISOR:
 
-            if (!(value == 0 && self._divisor.characters.count <= 0) &&             // 先頭値チェック
-                (self._divisor.characters.count < MAX_INPUT_DIGITNUMBER)) {     // リミットチェック
+            if (!(value == 0 && self._divisor.count <= 0) &&         // 先頭値チェック
+                (self._divisor.count < MAX_INPUT_DIGITNUMBER)) {     // リミットチェック
                 self._divisor.append(String(value))
             }
             else {
@@ -292,10 +292,10 @@ class RemainderCalculationManager {
         
         var outString: String = ""
         
-        if (inputString.characters.count > 0) {
+        if (inputString.count > 0) {
             
             // １文字削る
-            let offset = inputString.characters.count - 1
+            let offset = inputString.count - 1
             outString = String(inputString[..<inputString.index(inputString.startIndex, offsetBy: offset)])
 
             // 削った結果が0の場合は、空白とする
@@ -326,11 +326,11 @@ class RemainderCalculationManager {
     func checkInputValueForDecimalPoint( value: inout String) {
         
         if (value.contains(".") == false) {    // ２つ目の小数点チェック
-            if (value.characters.count <= 0) { // 先頭チェック
+            if (value.count <= 0) { // 先頭チェック
                 value.append("0.")
             }
-            else if ((value.characters.count > 0) &&
-                (value.characters.count <= (MAX_INPUT_DIGITNUMBER-2))) {   // リミットチェック
+            else if ((value.count > 0) &&
+                (value.count <= (MAX_INPUT_DIGITNUMBER-2))) {   // リミットチェック
                 value.append(".")
             }
             else {
@@ -348,12 +348,23 @@ class RemainderCalculationManager {
     func getExpressionString() -> String {
         
         var resString = ""
+        // 小数点以下がない場合はカット
+        var dividendString = _dividend
+        if ( dividendString.suffix(1) == "." ) {
+            dividendString = String(dividendString.prefix(_dividend.count-1))
+        }
+
+        var divisorString = _divisor
+        if ( divisorString.suffix(1) == "." ) {
+            divisorString = String(_divisor.prefix(_divisor.count-1))
+        }
         
+        // 式の作成
         switch self._calcState {
         case .WAIT_DIVISOR:
-            resString = _dividend + "÷"
+            resString = dividendString + "÷"
         case .DISP_ANSWER:
-            resString = _dividend + "÷" + _divisor
+            resString = dividendString + "÷" + divisorString
         default:    // WAIT_DIVIDEND
             resString = ""
             break;

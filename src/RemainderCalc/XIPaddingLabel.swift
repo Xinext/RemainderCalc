@@ -94,7 +94,7 @@ class XIPaddingLabel: UILabel {
         let padding = UIEdgeInsets(top: _paddingTop, left: _paddingLeft, bottom: _paddingBottom, right: _paddingRight)
         
         let text = self.text
-        if (text!.characters.count == 0) {
+        if (text!.count == 0) {
             return
         }
         var size = self.frame.size
@@ -111,7 +111,7 @@ class XIPaddingLabel: UILabel {
         var font = UIFont()
         var fs = fontSize
         var newAttributes = [NSAttributedStringKey : Any]()
-        self.attributedText?.enumerateAttributes(in: NSMakeRange(0, text!.characters.count), options: .longestEffectiveRangeNotRequired, using: {
+        self.attributedText?.enumerateAttributes(in: NSMakeRange(0, text!.count), options: .longestEffectiveRangeNotRequired, using: {
             (attributes: [NSAttributedStringKey : Any], range: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
             newAttributes = attributes
         })
