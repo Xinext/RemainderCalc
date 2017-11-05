@@ -1,5 +1,11 @@
 *** コンパイルするための準備 ***
 
+<概要>
+下記のファイルは、手順に従い各自用意する必要があります。
+AdModDef.swift
+GoogleService-Info.plist
+
+<手順>
 1.CocoaPodsライブラリのインストール
     (CocoaPodsの環境が用意されている事を前提にしています。)
     ターミナルにて、./srcフォルダへ移動して
@@ -10,5 +16,10 @@
     ./hidden/AdModDef.swift の内容を適切に変更して
     ./src/RemainderCalc/ へコピーしてください。
     (AdModの各IDはGoogleAdModの仕様に従ってください。)
+
+3.Firebase設定ファイル(GoogleService-Info.plist)について
+    GoogleService-Info.plistは、手順2で作成した広告を
+    Firebaseへリンクしてリンク先のプロジェクト設定からダウンロードしたものを
+    プロジェクトに追加してください。
 
 
