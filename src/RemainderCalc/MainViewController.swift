@@ -64,7 +64,7 @@ class MainViewController: UIViewController {
         // 表示アイテムのローカライズ
         localizeEachItem()
         
-        // SE(効果音)の初期ぁ
+        // SE(効果音)の初期化
         initSEAudio()
         
         // 広告マネージャーの初期化
