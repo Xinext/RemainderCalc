@@ -10,3 +10,4 @@ import CoreData
 public class D_History: NSManagedObject {
 
 }
+

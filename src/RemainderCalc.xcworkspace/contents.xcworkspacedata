@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:D_History+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:D_History+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:RemainderCalc.xcodeproj">
    </FileRef>
    <FileRef
